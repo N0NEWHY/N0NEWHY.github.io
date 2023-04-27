@@ -49,8 +49,10 @@ nav a:hover {
 }
 
 main {
-  padding: 20px;
-}
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
 
 section {
   margin-bottom: 20px;
