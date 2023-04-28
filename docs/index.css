@@ -89,13 +89,17 @@ P{
     text-indent: 2em;
 }
 
-p a{
+a{
     color: aquamarine;
     text-decoration: none;
 }
 
-p a:hover{
+a:hover{
     text-decoration: underline;
+}
+
+section{
+    font-size: 2.5vw;
 }
 
 .home {
