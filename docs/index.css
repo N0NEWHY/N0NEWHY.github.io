@@ -14,12 +14,16 @@ body {
 
 header {
     position: fixed;
+    top: 0px;
     width: 100%;
+
     background-color: #323232;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row
+    flex-direction: row;
+    z-index: 999;
 }
 
 .logo {
@@ -47,8 +51,13 @@ header {
         cursor: pointer;
     }
 
-    .welcome{
+    .home .img-container {
+        width: 100vh;
+    }
+
+    .txt-container h2 {
         display: none;
+        width: 0;
     }
 }
 
@@ -79,66 +88,120 @@ header {
 
 main {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
 }
 
-P{
+P {
     margin-top: 2vh;
     font-size: 20px;
     margin-bottom: 2vh;
     text-indent: 2em;
 }
 
-a{
+a {
     color: aquamarine;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-section{
-    font-size: 2.5vw;
+section {
+    font-size: 20px;
 }
 
 .home {
-    height: 700px;
-    background-image: url("/imgs/background.jpg");
-    background-size: 700px;
-    background-repeat: no-repeat;
-    background-position: -150px ;
+    height: 50vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.img-container {
+    width: 50%;
+    background-color: #323232;
+}
+
+.userPhoto {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.txt-container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3vw;
+    font-style: italic;
 }
 
-.welcome{
-    margin-right: 2vw;
-    font-size: 3vw
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
 }
 
+.card {
+    position: relative;
+    
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 
+    color: #323232;
+}
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
+.card:not(:hover) {
+    filter: blur(1.5px);
+}
 
+.card h3{
+    font-size: 21px;
+}
 
+.card p {
+    display: block;
+    text-indent: 0;
+    font-size: 18px;
+}
 
+.brief{
+    display: flex; 
+    flex-direction: column; 
+    align-items: start;
+    justify-content: center;
+}
 
+.card .detail {
+    display: none;
+}
 
+.card.active .brief {
+    display: none;
+}
 
-
-
-
-
-
-
-
-
+.card.active .detail {
+    display: block;
+}
 
 footer {
-    background-color: #1f1f1f;
+    background-color: #323232;
     color: #fff;
     padding: 20px;
     text-align: center;

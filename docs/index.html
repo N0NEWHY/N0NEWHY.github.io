@@ -24,7 +24,10 @@
 
 	<main>
 		<section id="home" class="home">
-			<div class="welcome">
+			<div class="img-container">
+				<img src="/imgs/background.jpg" alt="User Photo" class="userPhoto">
+			</div>
+			<div class="txt-container">
 				<h2>HI!</h2>
 				<h2>THIS IS NONE.</h2>
 			</div>
@@ -52,18 +55,108 @@
 
 		<section id="resume" class="resume">
 			<h2>Resume</h2>
-			<p>
-				<a href="../resources/Curriculum Vitae.pdf" target="_blank">Download Resume</a>
-			</p>
+
+			<p><a href="../resources/Curriculum Vitae.pdf" target="_blank">Download Resume</a></p>
 		</section>
+
 
 		<section id="projects">
 			<h2>Projects</h2>
-			<ul>
-				<li><a href="#">Project 1</a></li>
-				<li><a href="#">Project 2</a></li>
-				<li><a href="#">Project 3</a></li>
-			</ul>
+			<div class="card-container">
+				<!-- 01 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title">Library Violation Personnel Management System</h3>
+						<p class="date">
+							<strong>Date:</strong><br>
+							Nov.2021 – Dec.2021
+						</p>
+						<p class="organization">
+							<strong>Organization:</strong><br>
+							Xi'an Jiaotong-Liverpool University
+						</p>
+					</div>
+
+					<div class="detail">
+						<p><strong>Brief:</strong><br>
+							wait
+						</p>
+					</div>
+				</div>
+
+				<!-- 02 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title">A Simple Database for Epidemic Prevention and Control based on GPS</h3>
+						<p class="date">
+							<strong>Date:</strong><br>
+							Nov.2021 – Dec.2021
+						</p>
+						<p class="organization">
+							<strong>Organization:</strong><br>
+							Xi'an Jiaotong-Liverpool University
+						</p>
+					</div>
+
+					<div class="detail">
+						<p><strong>Brief:</strong><br>
+							wait
+						</p>
+					</div>
+				</div>
+
+				<!-- 03 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title">Imperial Data Science Online Summer School</h3>
+						<p class="date">
+							<strong>Date:</strong><br>
+							Jul.2022 – Aug.2022
+						</p>
+						<p class="organization">
+							<strong>Organization:</strong><br>
+							Imperial College London
+						</p>
+					</div>
+
+					<div class="detail">
+						<p><strong>Brief:</strong><br>
+							wait
+						</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="brief">
+						<h3 class="title">Algorithmic biases in EDM(Education Data Mining)</h3>
+						<p class="date">
+							<strong>Date:</strong><br>
+							Jul.2022 – Aug.2022
+						</p>
+						<p class="organization">
+							<strong>Organization:</strong><br>
+							Xi'an Jiaotong-Liverpool University
+						</p>
+					</div>
+
+					<div class="detail">
+						<p><strong>Brief:</strong><br>
+							wait
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			<script>
+				const cards = document.querySelectorAll('.card');
+
+				cards.forEach(card => {
+					card.addEventListener('click', () => {
+						card.classList.toggle('active');
+					});
+				});
+			</script>
 		</section>
 
 		<section id="contact">
