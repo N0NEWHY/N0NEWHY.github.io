@@ -138,6 +138,53 @@ section {
     font-style: italic;
 }
 
+/* Define the keyframes for the glitch effect */
+@keyframes glitch {
+    0% {
+        text-shadow: -1px -1px 0 #00ffff, 1px 1px 0 #ff00ff;
+    }
+
+    20% {
+        text-shadow: 1px -1px 0 #00ffff, -1px 1px 0 #ff00ff;
+    }
+
+    40% {
+        text-shadow: -1px 1px 0 #00ffff, 1px -1px 0 #ff00ff;
+    }
+
+    60% {
+        text-shadow: 1px 1px 0 #00ffff, -1px -1px 0 #ff00ff;
+    }
+
+    80% {
+        text-shadow: -1px -1px 0 #00ffff, 1px 1px 0 #ff00ff;
+    }
+
+    100% {
+        text-shadow: 1px -1px 0 #00ffff, -1px 1px 0 #ff00ff;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the glitch effect to the h2 elements */
+.glitch {
+    animation: glitch 1s infinite, flicker 5s infinite;
+    animation-fill-mode: forwards;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
@@ -149,7 +196,7 @@ section {
 
 .card {
     position: relative;
-    
+
     height: 400px;
     background-color: #fff;
     border-radius: 10px;
@@ -171,7 +218,7 @@ section {
     filter: blur(1.5px);
 }
 
-.card h3{
+.card h3 {
     font-size: 21px;
 }
 
@@ -181,15 +228,20 @@ section {
     font-size: 18px;
 }
 
-.brief{
-    display: flex; 
-    flex-direction: column; 
+.brief {
+    display: flex;
+    flex-direction: column;
     align-items: start;
     justify-content: center;
 }
 
+.card .brief {
+    display: block;
+}
+
 .card .detail {
     display: none;
+    
 }
 
 .card.active .brief {
@@ -199,6 +251,60 @@ section {
 .card.active .detail {
     display: block;
 }
+.brief {
+    height: 100%;
+}
+
+
+.brief .title{
+    height:30%;
+}
+
+.brief .organization{
+    min-height: 34%;
+}
+
+.brief .tips{
+    font-size: 15px;
+    text-align: end;
+}
+
+.detail p{
+    margin-top: 0;
+}
+
+.detail ul{
+    margin-left: 10%;
+    margin-top: -20px;
+}
+
+.detail ul li{
+    font-size: 15px;
+}
+
+.detail ul li a{
+    color: #323232;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: #323232;
