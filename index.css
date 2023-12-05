@@ -187,7 +187,7 @@ section {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
     grid-gap: 20px;
     padding: 20px 0;
     justify-content: center;
@@ -197,7 +197,7 @@ section {
 .card {
     position: relative;
 
-    height: 400px;
+    height: 700px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -214,9 +214,9 @@ section {
     cursor: pointer;
 }
 
-.card:not(:hover) {
+/* .card:not(:hover) {
     filter: blur(1.5px);
-}
+} */
 
 .card h3 {
     font-size: 21px;
@@ -275,7 +275,7 @@ section {
 
 .detail ul{
     margin-left: 10%;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 .detail ul li{
