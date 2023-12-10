@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+body {
+    background-color: #323232;
+    color: #E1E1E3;
+}
+
+.home {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.img-container {
+    width: 50%;
+    background-color: #323232;
+}
+
+.userPhoto {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3vw;
+    font-style: italic;
+}
+
+/* Define the keyframes for the glitch effect */
+@keyframes glitch {
+    0% {
+        text-shadow: -1px -1px 0 #00ffff, 1px 1px 0 #ff00ff;
+    }
+
+    20% {
+        text-shadow: 1px -1px 0 #00ffff, -1px 1px 0 #ff00ff;
+    }
+
+    40% {
+        text-shadow: -1px 1px 0 #00ffff, 1px -1px 0 #ff00ff;
+    }
+
+    60% {
+        text-shadow: 1px 1px 0 #00ffff, -1px -1px 0 #ff00ff;
+    }
+
+    80% {
+        text-shadow: -1px -1px 0 #00ffff, 1px 1px 0 #ff00ff;
+    }
+
+    100% {
+        text-shadow: 1px -1px 0 #00ffff, -1px 1px 0 #ff00ff;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the glitch effect to the h2 elements */
+.glitch {
+    animation: glitch 1s infinite, flicker 5s infinite;
+    animation-fill-mode: forwards;
+}

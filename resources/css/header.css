@@ -19,20 +19,14 @@ header {
     height: 50px;
     background-color: #323232;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     z-index: 999;
 }
 
 
-.nav ul {
-    background-color: #323232;
-    overflow: hidden;
-    list-style: none;
-    margin-left: 30px;
-    padding: 0;
-}
+
 
 .menu {
     width: 40px;
@@ -40,51 +34,68 @@ header {
 
 /* 小于700px的显示 */
 @media screen and (max-width: 700px) {
-    .menu-container {
-        margin-left: 0;
-    }
-
     .logo {
         background-color: #323232;
         font-size: 36px;
         margin-left: 30px;
         margin-right: auto;
+        transition: margin 0.3s ease-in-out;
+        /* 添加过渡效果 */
     }
 
     .menu {
-        background-color: #e20000;
+        background-color: #323232;
         margin-right: 30px;
         width: 40px;
+        transition: margin 0.3s ease-in-out;
+        /* 添加过渡效果 */
     }
 
     .nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 50px;
         left: 0;
         width: 100%;
-        background-color: #e20000;
+        background-color: #323232;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out, visibility 0.5s ease-in-out;
     }
 
     .nav ul.show {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        max-height: 200px;
+        /* 根据实际内容的最大高度调整 */
+        transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out, visibility 0.5s ease-in-out;
     }
 
     .nav li {
-        display: block;
+        background-color: #3d3d3d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
         text-align: center;
-        margin: 0;
+        margin: auto;
+        width: 100%;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav a {
+        font-size: 20px;
+        color: #E1E1E3;
+        text-decoration: none;
     }
 }
 
 /* 大于700px的显示 */
 @media screen and (min-width: 701px) {
-    .menu-container {
-        margin-left: 0;
-        /* 将左边距调整为0 */
-    }
-
     .logo {
         background-color: #323232;
         font-size: 36px;
@@ -96,19 +107,23 @@ header {
     }
 
     .nav ul {
+        background-color: #323232;
         display: flex;
+        margin-right: auto;
     }
-}
 
-.nav li {
-    display: inline-block;
-    margin-right: 40px;
+    .nav li {
+        display: inline-block;
+        margin-right: 40px;
+
+    }
 }
 
 .nav a {
     font-size: 20px;
     color: #E1E1E3;
     text-decoration: none;
+    margin: auto;
 }
 
 .nav a:hover {
