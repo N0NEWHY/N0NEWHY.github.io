@@ -12,26 +12,6 @@ body {
     color: #E1E1E3;
 }
 
-main {
-    width: 80%;
-    margin: auto;
-}
-
-P {
-    margin-top: 2vh;
-    font-size: 20px;
-    margin-bottom: 2vh;
-    text-indent: 2em;
-}
-
-a {
-    color: aquamarine;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 section {
     font-size: 20px;
