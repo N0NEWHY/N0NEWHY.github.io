@@ -133,3 +133,17 @@ header {
 .nav a:hover {
     text-decoration: underline;
 }
+
+
+.lang-toggle{display:flex;gap:6px;align-items:center;}
+.lang-btn{
+  padding:4px 8px;
+  border:1px solid #00b7ff;
+  background:transparent;
+  color:#00b7ff;
+  cursor:pointer;
+  border-radius:4px;
+  font-size:14px;
+  transition:.2s;
+}
+.lang-btn.active{background:#00b7ff;color:#fff;}

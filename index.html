@@ -1,113 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NONE</title>
-    <link rel="stylesheet" href="../../resources/css/header.css">
-    <link rel="stylesheet" href="../../resources/css/home.css">
-    <link rel="stylesheet" href="../../resources/css/biography.css">
-    <link rel="stylesheet" href="../../resources/css/education.css">
-	
+	<link rel="stylesheet" href="./resources/css/header.css">
+	<link rel="stylesheet" href="./resources/css/home.css">
+	<link rel="stylesheet" href="./resources/css/biography.css">
+	<link rel="stylesheet" href="./resources/css/education.css">
+
 	<script src="./resources/js/header.js"></script>
+	<script src="./resources/js/i18n.js"></script>
 	<link rel="stylesheet" href="index.css">
 	<link rel="icon" href="./resources/imgs/background.jpg" type="image/x-icon">
 </head>
 
 <body>
 	<header>
-        <h1 id="logo" name="logo" class="logo">None</h1>
-        <img src="./resources/imgs/menu.png" alt="menu" id="menu" class="menu">
-        <nav id="nav" class="nav" name="nav">
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-	
+		<h1 id="logo" name="logo" class="logo">None</h1>
+		<img src="./resources/imgs/menu.png" alt="menu" id="menu" class="menu">
+		<nav id="nav" class="nav" name="nav">
+			<ul>
+				<li><a href="#about-me" data-i18n="header_about">About Me</a></li>
+				<li><a href="#resume" data-i18n="header_resume">Resume</a></li>
+				<li><a href="#projects" data-i18n="header_projects">Projects</a></li>
+				<li><a href="#contact" data-i18n="header_contact">Contact</a></li>
+				<li>
+					<div class="lang-toggle">
+						<button id="btnCN" class="lang-btn ">CN</button>
+						<button id="btnENG" class="lang-btn active">ENG</button>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
 
 	<main>
 		<section id="home" class="home">
-            <div class="img-container">
-                <img src="../resources/imgs/background.jpg" alt="User Photo" class="userPhoto">
-            </div>
-            <div class="txt-container">
-                <h2 class="glitch">HI!</h2>
-                <h2 class="glitch">THIS IS NONE.</h2>
-                <h2 class="glitch">HONGYU Wang &#x1F525;</h2>
-            </div>
-        </section>
+			<div class="img-container">
+				<img src="./resources/imgs/background.jpg" alt="User Photo" class="userPhoto">
+			</div>
+			<div class="txt-container">
+				<h2 class="glitch">HI!</h2>
+				<h2 class="glitch">THIS IS NONE.</h2>
+				<h2 class="glitch">HONGYU Wang &#x1F525;</h2>
+			</div>
+		</section>
 
-        <section id="biography" class="biography">
+		<section id="biography" class="biography">
 
-            <h2>Biography</h2>
-            <p>
-                &#x1F44B; Greetings! I'm Wang Hongyu, a fourth-year undergraduate student pursuing a degree in
-                Information and Computing Science at
-                <a href="https://www.xjtlu.edu.cn/en">Xi'an Jiaotong-Liverpool University</a> in Suzhou, China.
-            </p>
+			<h2>Biography</h2>
+			<p>
+				&#x1F44B; Greetings! I'm Wang Hongyu, a fourth-year undergraduate student pursuing a degree in
+				Information and Computing Science at
+				<a href="https://www.xjtlu.edu.cn/en">Xi'an Jiaotong-Liverpool University</a> in Suzhou, China.
+			</p>
 
-            <p>
-                My academic journey has been fueled by a curiosity for technology, leading me to explore various
-                aspects of Information and Computing Science. I find particular excitement in the realms of Virtual
-                Reality (VR), Augmented Reality (AR), Extended Reality (XR), and Game Development.
-            </p>
+			<p>
+				My academic journey has been fueled by a curiosity for technology, leading me to explore various
+				aspects of Information and Computing Science. I find particular excitement in the realms of Virtual
+				Reality (VR), Augmented Reality (AR), Extended Reality (XR), and Game Development.
+			</p>
 
-            <p>
-                Beyond my studies, I harbor a keen interest in computer vision topics, including stable diffusion
-                and nerf. I believe in the power of technology to shape innovative solutions and enhance our
-                understanding of the world.
-            </p>
+			<p>
+				Beyond my studies, I harbor a keen interest in computer vision topics, including stable diffusion
+				and nerf. I believe in the power of technology to shape innovative solutions and enhance our
+				understanding of the world.
+			</p>
 
-            <p>
-                Currently, I am engaged as a research assistant at X-CHI Lab, XJTLU, working alongside Professor <a
-                    href="https://scholar.google.com/citations?user=UJPH5ioAAAAJ&hl=en">Hai-Ning Liang</a>. This
-                experience allows me to delve deeper into the fascinating intersection of academia and practical
-                application.
-            </p>
+			<p>
+				Currently, I am engaged as a research assistant at X-CHI Lab, XJTLU, working alongside Professor <a
+					href="https://scholar.google.com/citations?user=UJPH5ioAAAAJ&hl=en">Hai-Ning Liang</a>. This
+				experience allows me to delve deeper into the fascinating intersection of academia and practical
+				application.
+			</p>
 
-        </section>
+		</section>
 
-        <section id="education" class="education">
-            <h2>Education</h2>
-        
-            <div class="timeline">
-                <div class="event">
-                    <div class="time-indicator">&#x1F4DA; 09. 2020 - 06. 2024</div>
-                    <div class="line"></div>
-                    <div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
-                        <img src="../resources/imgs/background.jpg" alt="University Logo">
-                        <div class="info">
-                            <h3>BSc in Information and Computing Science</h3>
-                            <p>School: Xi'an Jiaotong-Liverpool University</p>
-                            <p>GPA: 3.89/4.00</p>
-                        </div>                        
-                    </div>
-                </div>
-                
-                <div class="event">
-                    <div class="time-indicator">&#x1F4DA; 09. 2024 - ??. 20??</div>
-                    
-                    <div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
-                        <img src="../resources/imgs/background.jpg" alt="Future Logo">
-                        <div class="info">
-                            <h3>Future</h3>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Add more events as needed -->
-            </div>
-        </section>
+		<section id="education" class="education">
+			<h2>Education</h2>
+
+			<div class="timeline">
+				<div class="event">
+					<div class="time-indicator">&#x1F4DA; 09. 2020 - 06. 2024</div>
+					<div class="line"></div>
+					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
+						<img src="./resources/imgs/xjtlu.jpeg" alt="University Logo">
+						<div class="info">
+							<h3>BSc in Information and Computing Science</h3>
+							<p>School: Xi'an Jiaotong-Liverpool University</p>
+							<p>GPA: 3.89 / 4.00 &nbsp;|&nbsp; Top 5% &nbsp;|&nbsp; First Class Honours</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="event">
+					<div class="time-indicator">&#x1F4DA; 09. 2024 - 09. 2025</div>
+					<div class="line"></div>
+					<div class="content" data-hover="Imperial College London">
+						<img src="./resources/imgs/icl.jpeg" alt="University Logo">
+						<div class="info">
+							<h3>MRes in Medical Robotics and Image Guided Intervention</h3>
+							<p>School: Imperial College London</p>
+							<p>Expected &nbsp;|&nbsp; Full-time</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="event">
+					<div class="time-indicator">&#x1F4DA; 09. 2024 - ??. 20??</div>
+
+					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
+						<img src="./resources/imgs/icl.jpeg" alt="Future Logo">
+						<div class="info">
+							<h3>Future</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- Add more events as needed -->
+			</div>
+		</section>
 
 		<section id="resume" class="resume">
 			<h2>Resume</h2>
 
-			<p><a href="resources/Curriculum Vitae.pdf" target="_blank">Download Resume</a></p>
+			<p><a href=".resources/Curriculum Vitae.pdf" target="_blank">Download Resume</a></p>
 		</section>
 
 
@@ -132,7 +152,8 @@
 					<div class="detail">
 						<p><strong>Brief:</strong></p>
 						<ul>
-							<li>Completed a 6-week online summer school program on data science and machine learning at Imperial College London
+							<li>Completed a 6-week online summer school program on data science and machine learning at
+								Imperial College London
 							</li>
 							<li>
 								Utilized U-Net model to enhance brain tumor recognition and classification.
@@ -169,22 +190,26 @@
 						<p><strong>Brief:</strong><br></p>
 						<ul>
 							<li>
-								Conducted experiments on multiple datasets with different distributions to explore the impact of data distribution on prediction results
+								Conducted experiments on multiple datasets with different distributions to explore the
+								impact of data distribution on prediction results
 							</li>
 
 							<li>
-								Analyzed the influence of different data preprocessing methods and models’ selection on the accuracy and fairness for predicting the students’ learning outcomes
+								Analyzed the influence of different data preprocessing methods and models’ selection on
+								the accuracy and fairness for predicting the students’ learning outcomes
 							</li>
 
 							<li>
-								Compared different experiment results and evaluated methods to improve models or algorithms performance
+								Compared different experiment results and evaluated methods to improve models or
+								algorithms performance
 							</li>
 
 							<li>
-								Presented research findings on algorithmic biases in Educational Data Mining (EDM) at the judged poster presentation exhibit
+								Presented research findings on algorithmic biases in Educational Data Mining (EDM) at
+								the judged poster presentation exhibit
 							</li>
 
-							
+
 						</ul>
 					</div>
 				</div>
@@ -207,9 +232,13 @@
 					<div class="detail">
 						<p><strong>Brief:</strong></p>
 						<ul>
-							<li>Implemented game interface using UGUI, a grid-based map using the GridLayout component, and object placement and fusion using mouse clicks and EventSystem.</li>
-							<li>Utilized collision detection, ray detection, and different LayerTag and Layer detection layers for bullet hit and enemy skill release.</li>
-							<li><strong>Demo link:</strong> <a href="https://www.bilibili.com/video/BV1CT411s7Bd/?spm_id_from=333.337.search-card.all.click">Link</a></li>
+							<li>Implemented game interface using UGUI, a grid-based map using the GridLayout component,
+								and object placement and fusion using mouse clicks and EventSystem.</li>
+							<li>Utilized collision detection, ray detection, and different LayerTag and Layer detection
+								layers for bullet hit and enemy skill release.</li>
+							<li><strong>Demo link:</strong> <a
+									href="https://www.bilibili.com/video/BV1CT411s7Bd/?spm_id_from=333.337.search-card.all.click">Link</a>
+							</li>
 						</ul>
 					</div>
 				</div>
