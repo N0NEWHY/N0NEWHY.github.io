@@ -24,7 +24,7 @@
     background-color: #353535; /* Background color for the form container */
     border-radius: 8px; /* Rounded corners for the form container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    max-width: 600px; /* Limit form width for readability on large screens */
+    max-width: 800px; /* Limit form width for readability on large screens */
     margin: 0 auto; /* Center the form within the contact section */
     box-sizing: border-box; /* Include padding in element's total width and height */
 }
@@ -91,7 +91,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: flex-start; /* Align button to the start (left) */
+    align-self: flex-end; /* Align button to the start (left) */
     margin-top: 20px; /* Space between button and last form field */
 }
 
@@ -101,7 +101,7 @@
 }
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .contact {
         width: 90%;
         margin: 20px auto;

@@ -80,8 +80,9 @@
 
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .education {
+        
         width: 90%;
         padding: 15px 0;
     }

@@ -1,0 +1,117 @@
+/* publication.css */
+
+.publication {
+    background-color: burlywood;
+    color: #E1E1E3; /* Consistent text color */
+    width: 80%; /* Consistent width with other main sections */
+    margin: 30px auto; /* Vertical margin and horizontal centering */
+    padding: 20px 0; /* Vertical padding; horizontal padding handled by inner elements */
+}
+
+.publication h2 {
+    color: #E1E1E3;
+    font-size: 2.0em; /* Consistent font size for main titles */
+    margin-bottom: 30px; /* Space between title and publication container */
+    text-align: left; /* Left alignment for the title */
+    padding-left: 40px; /* Left padding to align with other section content's text */
+}
+
+.publication-container {
+    display: grid;
+    /* Responsive grid: auto-fit columns with minmax for flexible layout */
+    grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Each card min 300px wide */
+    gap: 30px; /* Gap between publication items */
+    padding: 0 0px; /* Horizontal padding to align with main section content */
+    justify-content: center; /* Center the grid items horizontally */
+    margin-top: 20px;
+}
+
+.publication-item {
+    background-color: #353535; /* Card background color, consistent with others */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px; /* Inner padding for each publication card */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out content nicely */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect transition */
+    color: #E1E1E3; /* Default text color inside card */
+    min-height: 450px; /* Set a minimum height to ensure consistent card size, adjust as needed */
+}
+
+.publication-item:hover {
+    transform: scale(1.02); /* Slight scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.pub-title {
+    font-size: 1.3em; /* Slightly smaller title than h2, but prominent */
+    color: aquamarine; /* Consistent highlight color */
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.pub-info, .pub-abstract, .pub-keywords, .pub-doi {
+    font-size: 0.95em;
+    color: #bdbdbd; /* Muted text color for details */
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.pub-abstract {
+    flex-grow: 1; /* Allow abstract to take up available space */
+    /* If you want to limit abstract height and add "read more" etc., this is where you'd add max-height and overflow */
+}
+
+.pub-info strong, .pub-abstract strong, .pub-keywords strong, .pub-doi strong {
+    color: #E1E1E3; /* Bold text remains bright */
+}
+
+.pub-doi a {
+    color: aquamarine; /* Link color consistency */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pub-doi a:hover {
+    text-decoration: underline;
+    color: #7fffd4;
+}
+
+
+
+/* Responsive Design (Media Queries) */
+@media screen and (max-width: 992px) {
+    .publication {
+        width: 80%; /* Adjusted width for smaller screens */
+        padding: 15px 0;
+        margin: 20px auto;
+    }
+
+    .publication h2 {
+        text-align: center; /* Center title on smaller screens */
+        padding-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .publication-container {
+        grid-template-columns: 1fr; /* Single column layout for cards on smaller screens */
+        gap: 25px;
+        padding: 0 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .publication-item {
+        padding: 20px;
+        min-height: auto; /* Auto height on small screens */
+    }
+
+    .pub-title {
+        font-size: 1.1em;
+    }
+
+    .pub-info, .pub-abstract, .pub-keywords, .pub-doi, .citation-code, .copy-citation-btn, .pub-btn {
+        font-size: 0.85em;
+    }
+
+}

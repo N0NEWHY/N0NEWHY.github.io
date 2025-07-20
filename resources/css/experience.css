@@ -18,15 +18,16 @@
 .card-container {
     display: grid;
     /* Responsive grid: auto-fit columns with a minimum width of 280px and grow to fill available space */
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px; /* Gap between grid items (cards) */
+    padding: 0 40px; /* Horizontal padding for the card container to align with main section content */
     justify-content: center; /* Center the grid items horizontally */
     margin-top: 20px; /* Margin from the title */
 }
 
 .card {
     position: relative;
-    height: 500px; /* Fixed height for consistent card size. Adjust if content overflows significantly. */
+    height: 400px; /* Fixed height for consistent card size. Adjust if content overflows significantly. */
     background-color: #353535; /* Card background color */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -156,7 +157,7 @@
     background-color: #555;
     color: #E1E1E3;
     border: none;
-    align-self: flex-end; /* Align to the left in detail */
+    align-self: flex-start; /* Align to the left in detail */
 }
 
 .card .back-btn:hover {
@@ -203,7 +204,7 @@
 }
 
 /* Responsive Design (Media Queries) */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .experience {
         width: 90%;
         padding: 15px 0;

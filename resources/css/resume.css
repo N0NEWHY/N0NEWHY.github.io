@@ -12,7 +12,8 @@
   padding: 20px 0;
   /* 上下内边距，左右内边距由 h2 和 resume_preview_container 内部控制 */
   /* background-color: #323232; /* 保持与 body 背景色一致，不加独立背景，除非你想要像 biography 那样的卡片效果 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加一点阴影，让它更有层次感 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 加一点阴影，让它更有层次感 */
   border-radius: 8px;
 }
 
@@ -102,11 +103,10 @@
 }
 
 /* 媒体查询：适配小屏幕 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .resume {
     width: 90%;
-    /* 小屏幕下可以更宽一些 */
-    padding: 15px 0;
+        padding: 15px 0;
   }
 
   .resume h2 {
