@@ -1,23 +1,38 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const cards = document.querySelectorAll(".card");
+const projectDetails = [
+  `
+  <h3>Imperial Data Science Summer School</h3>
+  <ul>
+    <li>6-week ML program at Imperial College London</li>
+    <li>Used U-Net for brain tumor segmentation</li>
+    <li>Preprocessed data with Albumentations</li>
+    <li>Trained models in PyTorch</li>
+    <li>Evaluated using Dice/IoU</li>
+  </ul>
+  `,
+  `
+  <h3>Algorithmic Bias in Education Data Mining</h3>
+  <ul>
+    <li>Analyzed data distribution vs. prediction fairness</li>
+    <li>Compared models & preprocessing strategies</li>
+    <li>Presented findings in poster session</li>
+  </ul>
+  `,
+  `
+  <h3>2D Game "Cloud War"</h3>
+  <ul>
+    <li>Unity-based tower defense game</li>
+    <li>Used UGUI, GridLayout, EventSystem</li>
+    <li>Raycast and collision detection for gameplay</li>
+    <li><a href="https://www.bilibili.com/video/BV1CT411s7Bd/" target="_blank">Demo Video</a></li>
+  </ul>
+  `
+];
 
-//     cards.forEach((card) => {
-//         card.addEventListener("click", function () {
-//             // Toggle the 'active' class for the clicked card
-//             card.classList.toggle("active");
+function openDetail(index) {
+  document.getElementById("modalBody").innerHTML = projectDetails[index];
+  document.getElementById("detailModal").style.display = "flex";
+}
 
-//             // Toggle the display of the brief and detail sections
-//             const brief = card.querySelector(".brief");
-//             const detail = card.querySelector(".detail");
-
-//             if (card.classList.contains("active")) {
-//                 brief.style.display = "none";
-//                 detail.style.display = "block";
-//             } else {
-//                 brief.style.display = "block";
-//                 detail.style.display = "none";
-//             }
-//         });
-//     });
-// });
-
+function closeDetail() {
+  document.getElementById("detailModal").style.display = "none";
+}

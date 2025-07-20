@@ -1,0 +1,140 @@
+/* resume.css */
+
+.resume {
+  background-color: #353535;
+  /*background-color: rgb(254, 157, 0);/**/
+  color: #E1E1E3;
+  /* 关键调整：让 resume 模块整体宽度和 biography/education 对齐，并通过 margin auto 居中 */
+  width: 80%;
+  /* 和 biography/education 保持一致的宽度 */
+  margin: 30px auto;
+  /* 垂直外边距，水平自动居中，与前面模块保持间隔 */
+  padding: 20px 0;
+  /* 上下内边距，左右内边距由 h2 和 resume_preview_container 内部控制 */
+  /* background-color: #323232; /* 保持与 body 背景色一致，不加独立背景，除非你想要像 biography 那样的卡片效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加一点阴影，让它更有层次感 */
+  border-radius: 8px;
+}
+
+.resume h2 {
+  color: #E1E1E3;
+  font-size: 2.0em;
+  /* 和 biography/education h2 保持一致 */
+  margin-bottom: 30px;
+  /* 标题和内容之间的距离 */
+  text-align: left;
+  /* 保持左对齐 */
+  padding-left: 40px;
+  /* 保持与 biography/education 内容对齐的左内边距 */
+}
+
+/* 这两个类在你提供的 CSS 中，但 HTML 里似乎没有直接用到 .resume .event，暂时保留。 */
+.resume .event {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.resume_preview_container {
+  /*background-color: rgb(72, 254, 0);/**/
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许项目换行 */
+  gap: 15%;
+  /* 增加项目之间的间距，让它们不那么拥挤 */
+  justify-content: center;
+  /* 水平居中所有预览图 */
+  align-items: flex-start;
+  /* 垂直对齐，从顶部开始 */
+  margin-top: 2rem;
+  /* 增加容器顶部与标题的间距 */
+  /* 关键：给容器一个左内边距，让里面的内容整体和前面的文本对齐 */
+  padding-left: 40px;
+  /* 和 biography/education 文本对齐 */
+  padding-right: 40px;
+  /* 右侧也留同样的间距 */
+}
+
+.resume_preview {
+  /*background-color: rgb(254, 55, 0);/**/
+  text-align: center;
+  max-width: 400px;
+  /* 保持每个预览图的最大宽度 */
+  /* 可以考虑给每个预览图也加一个背景和阴影，如果想要统一的卡片效果 */
+  /* background-color: #353535; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  padding: 15px;
+  /* 预览图内部的内边距 */
+}
+
+.resume_img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resume_img:hover {
+  transform: scale(1.03);
+}
+
+.download_link {
+  display: inline-block;
+  margin-top: 1rem;
+  /* 增加下载链接与图片之间的间距 */
+  padding: 0.6rem 1.5rem;
+  /* 稍微增大按钮，更容易点击 */
+  background-color: #555;
+  /* 调整按钮颜色，可以和简历背景色 #353535 更协调 */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  /* 增加过渡效果 */
+}
+
+.download_link:hover {
+  background-color: #777;
+  /* 悬停时颜色变亮 */
+}
+
+/* 媒体查询：适配小屏幕 */
+@media screen and (max-width: 768px) {
+  .resume {
+    width: 90%;
+    /* 小屏幕下可以更宽一些 */
+    padding: 15px 0;
+  }
+
+  .resume h2 {
+    text-align: center;
+    /* 小屏幕下标题居中 */
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .resume_preview_container {
+    flex-direction: column;
+    /* 小屏幕下垂直堆叠 */
+    align-items: center;
+    /* 垂直堆叠后水平居中 */
+    padding-left: 0;
+    padding-right: 0;
+    gap: 1.5rem;
+    /* 调整垂直间距 */
+  }
+
+  .resume_preview {
+    max-width: 90%;
+    /* 小屏幕下预览图可以占更大部分宽度 */
+    padding: 10px;
+  }
+
+  .download_link {
+    padding: 0.5rem 1rem;
+    /* 小屏幕下按钮可以小一点 */
+  }
+}

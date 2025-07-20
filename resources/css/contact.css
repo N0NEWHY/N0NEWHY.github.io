@@ -1,0 +1,145 @@
+/* contact.css */
+
+.contact {
+    color: #E1E1E3; /* Text color */
+    width: 80%; /* Consistent width with other sections */
+    margin: 30px auto; /* Vertical margin and horizontal centering */
+    padding: 20px 0; /* Vertical padding; horizontal padding controlled by inner elements */
+}
+
+.contact h2 {
+    color: #E1E1E3;
+    font-size: 2.0em; /* Consistent with other h2 titles */
+    margin-bottom: 30px; /* Space between title and form */
+    text-align: left; /* Left alignment */
+    padding-left: 40px; /* Left padding to align with other section content */
+}
+
+/* Form styling */
+.contact form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 18px; /* Space between form fields */
+    padding: 30px 40px; /* Padding inside the form, aligning with text content from other sections */
+    background-color: #353535; /* Background color for the form container */
+    border-radius: 8px; /* Rounded corners for the form container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 600px; /* Limit form width for readability on large screens */
+    margin: 0 auto; /* Center the form within the contact section */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.contact label {
+    color: #E1E1E3;
+    font-size: 1.0em;
+    margin-bottom: 2px; /* Small space between label text and input field */
+    display: flex; /* Flex container for label text and input/textarea */
+    flex-direction: column; /* Stack label text and input/textarea vertically */
+}
+
+.contact input[type="email"],
+.contact textarea, /* Styling for the new textarea */
+.contact input[type="file"] {
+    width: 100%; /* Input/textarea width fills its parent container */
+    padding: 12px 15px; /* Padding inside input/textarea */
+    margin-top: 5px; /* Space between label and input/textarea */
+    border: 1px solid #555; /* Border color */
+    border-radius: 6px; /* Rounded corners */
+    background-color: #444; /* Background color for input/textarea */
+    color: #E1E1E3; /* Text color inside input/textarea */
+    font-size: 1.0em;
+    box-sizing: border-box; /* Include padding and border in total width/height */
+}
+
+.contact textarea {
+    min-height: 120px; /* Minimum height for the message textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.contact input[type="email"]:focus,
+.contact textarea:focus, /* Focus styling for textarea */
+.contact input[type="file"]:focus {
+    border-color: aquamarine; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px aquamarine; /* Shadow on focus */
+}
+
+/* File input button styling */
+.contact input[type="file"]::file-selector-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact input[type="file"]::file-selector-button:hover {
+    background-color: #777;
+}
+
+/* Submit button styling */
+.contact button[type="submit"] {
+    padding: 12px 25px; /* Padding for the button */
+    background-color: aquamarine; /* Button background color */
+    color: #323232; /* Button text color */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Align button to the start (left) */
+    margin-top: 20px; /* Space between button and last form field */
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #7fffd4; /* Lighter background on hover */
+    transform: translateY(-2px); /* Slight upward lift on hover */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .contact {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px 0;
+    }
+
+    .contact h2 {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .contact form {
+        padding: 20px 25px; /* Adjusted padding for smaller screens */
+        max-width: 90%;
+        margin: 0 auto;
+        gap: 15px;
+    }
+    
+    .contact label {
+        font-size: 0.95em;
+    }
+
+    .contact input[type="email"],
+    .contact textarea,
+    .contact input[type="file"] {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .contact textarea {
+        min-height: 100px; /* Slightly smaller min-height on mobile */
+    }
+
+    .contact button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1.0em;
+        align-self: center; /* Center button on smaller screens */
+        margin-top: 15px;
+    }
+}

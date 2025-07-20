@@ -9,9 +9,14 @@
 	<link rel="stylesheet" href="./resources/css/home.css">
 	<link rel="stylesheet" href="./resources/css/biography.css">
 	<link rel="stylesheet" href="./resources/css/education.css">
+	<link rel="stylesheet" href="./resources/css/resume.css">
+	<link rel="stylesheet" href="./resources/css/experience.css">
+	<link rel="stylesheet" href="./resources/css/contact.css">
 
 	<script src="./resources/js/header.js"></script>
-	<script src="./resources/js/i18n.js"></script>
+	<script src="./resources/js/i18n.js" defer></script>
+
+	<script src="./resources/js/card.js"></script>
 	<link rel="stylesheet" href="index.css">
 	<link rel="icon" href="./resources/imgs/background.jpg" type="image/x-icon">
 </head>
@@ -43,19 +48,19 @@
 				<img src="./resources/imgs/background.jpg" alt="User Photo" class="userPhoto">
 			</div>
 			<div class="txt-container">
-				<h2 class="glitch">HI!</h2>
-				<h2 class="glitch">THIS IS NONE.</h2>
-				<h2 class="glitch">HONGYU Wang &#x1F525;</h2>
+				<h2 class="glitch" data-i18n="home_hi">HI!</h2>
+				<h2 class="glitch" data-i18n="home_intro">THIS IS NONE.</h2>
+				<h2 class="glitch" data-i18n="home_name">HONGYU Wang 🔥</h2>
 			</div>
 		</section>
 
 		<section id="biography" class="biography">
 
-			<h2>Biography</h2>
-			<p>
-				&#x1F44B; Greetings! I'm Wang Hongyu, a fourth-year undergraduate student pursuing a degree in
-				Information and Computing Science at
-				<a href="https://www.xjtlu.edu.cn/en">Xi'an Jiaotong-Liverpool University</a> in Suzhou, China.
+			<h2 data-i18n="biography_title">Biography</h2>
+			<p data-i18n="biography_p1">
+				&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an MRes in Medical Robotics and Image-Guided
+				Intervention at
+				<a href="https://www.imperial.ac.uk/">Imperial College London</a> in London, .
 			</p>
 
 			<p>
@@ -126,12 +131,34 @@
 
 		<section id="resume" class="resume">
 			<h2>Resume</h2>
+			<div class="resume_preview_container">
 
-			<p><a href=".resources/Curriculum Vitae.pdf" target="_blank">Download Resume</a></p>
+				<!-- 中文简历 -->
+				<div class="resume_preview">
+					<a href="./resources/Curriculum_Vitae.pdf" target="_blank">
+						<img src="./resources/imgs/cv_cn_preview.jpg" alt="Resume Preview CN" class="resume_img" />
+					</a>
+					<p>
+						<a href="./resources/Curriculum_Vitae.pdf" target="_blank" class="download_link">Download CN</a>
+					</p>
+				</div>
+
+				<!-- 英文简历 -->
+				<div class="resume_preview">
+					<a href="./resources/Curriculum_Vitae_Eng.pdf" target="_blank">
+						<img src="./resources/imgs/cv_cn_preview.jpg" alt="Resume Preview ENG" class="resume_img" />
+					</a>
+					<p>
+						<a href="./resources/Curriculum_Vitae_Eng.pdf" target="_blank" class="download_link">Download
+							ENG</a>
+					</p>
+				</div>
+
+			</div>
 		</section>
 
 
-		<section id="projects">
+		<section id="experience" class="experience">
 			<h2>Projects Experiences</h2>
 			<div class="card-container">
 				<!-- 01 -->
@@ -256,16 +283,29 @@
 			</script>
 		</section>
 
-		<section id="contact">
+
+		<section id="contact" class="contact">
 			<h2>Contact</h2>
-			<ul>
-				<li>Email: <a href="mailto:youremail@example.com">Hongyu dot Wang20 at xjtlu.edu dot cn</a></li>
-			</ul>
+			<form action="https://formspree.io/f/mzzvdepg" method="POST" enctype="multipart/form-data">
+				<label>
+					Your email:
+					<input type="email" name="email">
+				</label>
+				<label>
+					Your message:
+					<textarea name="message"></textarea>
+				</label>
+				<label>
+					Your file:
+					<input type="file" name="upload">
+				</label>
+				<button type="submit">Send</button>
+			</form>
 		</section>
 	</main>
 
 	<footer>
-		<p>&copy; 2023 My Name</p>
+		<p>&copy; NONE - Programming: from Hello World to Hell No.</p>
 	</footer>
 </body>
 
