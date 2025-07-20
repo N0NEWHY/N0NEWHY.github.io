@@ -15,6 +15,7 @@
 
 	<script src="./resources/js/header.js"></script>
 	<script src="./resources/js/i18n.js" defer></script>
+	<script src="./resources/js/card.js" defer></script>
 
 	<script src="./resources/js/card.js"></script>
 	<link rel="stylesheet" href="index.css">
@@ -89,14 +90,12 @@
 
 			<div class="timeline">
 				<div class="event">
-					<div class="time-indicator">&#x1F4DA; 09. 2020 - 06. 2024</div>
-					<div class="line"></div>
+					<div class="time-indicator">&#x1F4DA; 09. 2024 - ??. 20??</div>
+
 					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
-						<img src="./resources/imgs/xjtlu.jpeg" alt="University Logo">
+						<img src="./resources/imgs/icl.jpeg" alt="Future Logo">
 						<div class="info">
-							<h3>BSc in Information and Computing Science</h3>
-							<p>School: Xi'an Jiaotong-Liverpool University</p>
-							<p>GPA: 3.89 / 4.00 &nbsp;|&nbsp; Top 5% &nbsp;|&nbsp; First Class Honours</p>
+							<h3>Future</h3>
 						</div>
 					</div>
 				</div>
@@ -115,12 +114,14 @@
 				</div>
 
 				<div class="event">
-					<div class="time-indicator">&#x1F4DA; 09. 2024 - ??. 20??</div>
-
+					<div class="time-indicator">&#x1F4DA; 09. 2020 - 06. 2024</div>
+					<div class="line"></div>
 					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
-						<img src="./resources/imgs/icl.jpeg" alt="Future Logo">
+						<img src="./resources/imgs/xjtlu.jpeg" alt="University Logo">
 						<div class="info">
-							<h3>Future</h3>
+							<h3>BSc in Information and Computing Science</h3>
+							<p>School: Xi'an Jiaotong-Liverpool University</p>
+							<p>GPA: 3.89 / 4.00 &nbsp;|&nbsp; Top 5% &nbsp;|&nbsp; First Class Honours</p>
 						</div>
 					</div>
 				</div>
@@ -161,7 +162,6 @@
 		<section id="experience" class="experience">
 			<h2>Projects Experiences</h2>
 			<div class="card-container">
-				<!-- 01 -->
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">Imperial Data Science Online Summer School</h3>
@@ -173,32 +173,23 @@
 							<strong>Organization:</strong><br>
 							Imperial College London
 						</p>
-						<p class="tips">Click to See Detail</p>
+						<button class="view-detail-btn" data-target="detail-01">View Details</button>
 					</div>
 
 					<div class="detail">
 						<p><strong>Brief:</strong></p>
 						<ul>
 							<li>Completed a 6-week online summer school program on data science and machine learning at
-								Imperial College London
-							</li>
-							<li>
-								Utilized U-Net model to enhance brain tumor recognition and classification.
-							</li>
-							<li>
-								Preprocessed data using Albumentations library
-							</li>
-							<li>
-								Built and trained model using PyTorch
-							</li>
-							<li>
-								Evaluated model performance using dice and IoU metrics
-							</li>
+								Imperial College London</li>
+							<li>Utilized U-Net model to enhance brain tumor recognition and classification.</li>
+							<li>Preprocessed data using Albumentations library</li>
+							<li>Built and trained model using PyTorch</li>
+							<li>Evaluated model performance using dice and IoU metrics</li>
 						</ul>
+						<button class="back-btn" data-target="brief-01">Back to Brief</button>
 					</div>
 				</div>
 
-				<!-- 02 -->
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">Algorithmic biases in EDM(Education Data Mining)</h3>
@@ -210,38 +201,25 @@
 							<strong>Organization:</strong><br>
 							North Carolina State University
 						</p>
-						<p class="tips">Click to See Detail</p>
+						<button class="view-detail-btn" data-target="detail-02">View Details</button>
 					</div>
 
 					<div class="detail">
 						<p><strong>Brief:</strong><br></p>
 						<ul>
-							<li>
-								Conducted experiments on multiple datasets with different distributions to explore the
-								impact of data distribution on prediction results
-							</li>
-
-							<li>
-								Analyzed the influence of different data preprocessing methods and models’ selection on
-								the accuracy and fairness for predicting the students’ learning outcomes
-							</li>
-
-							<li>
-								Compared different experiment results and evaluated methods to improve models or
-								algorithms performance
-							</li>
-
-							<li>
-								Presented research findings on algorithmic biases in Educational Data Mining (EDM) at
-								the judged poster presentation exhibit
-							</li>
-
-
+							<li>Conducted experiments on multiple datasets with different distributions to explore the
+								impact of data distribution on prediction results</li>
+							<li>Analyzed the influence of different data preprocessing methods and models’ selection on
+								the accuracy and fairness for predicting the students’ learning outcomes</li>
+							<li>Compared different experiment results and evaluated methods to improve models or
+								algorithms performance</li>
+							<li>Presented research findings on algorithmic biases in Educational Data Mining (EDM) at
+								the judged poster presentation exhibit</li>
 						</ul>
+						<button class="back-btn" data-target="brief-02">Back to Brief</button>
 					</div>
 				</div>
 
-				<!-- 03 -->
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">2D Tower Defense Game "Cloud War"</h3>
@@ -253,7 +231,7 @@
 							<strong>Organization:</strong><br>
 							Timi X Sanjiao Cup Game Jam
 						</p>
-						<p class="tips">Click to See Detail</p>
+						<button class="view-detail-btn" data-target="detail-03">View Details</button>
 					</div>
 
 					<div class="detail">
@@ -264,23 +242,14 @@
 							<li>Utilized collision detection, ray detection, and different LayerTag and Layer detection
 								layers for bullet hit and enemy skill release.</li>
 							<li><strong>Demo link:</strong> <a
-									href="https://www.bilibili.com/video/BV1CT411s7Bd/?spm_id_from=333.337.search-card.all.click">Link</a>
-							</li>
+									href="https://www.bilibili.com/video/BV1CT411s7Bd/?spm_id_from=333.337.search-card.all.click"
+									target="_blank">Link</a></li>
 						</ul>
+						<button class="back-btn" data-target="brief-03">Back to Brief</button>
 					</div>
 				</div>
+
 			</div>
-
-
-			<script>
-				const cards = document.querySelectorAll('.card');
-
-				cards.forEach(card => {
-					card.addEventListener('click', () => {
-						card.classList.toggle('active');
-					});
-				});
-			</script>
 		</section>
 
 

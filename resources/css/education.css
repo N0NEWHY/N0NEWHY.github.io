@@ -1,92 +1,54 @@
-/* education.css */
-
 .education {
-    /*background-color: rgb(2, 128, 255); /**/
+    /* background-color: rgb(7, 144, 98); */
     color: #E1E1E3;
-    width: 80%; /* 和 biography 保持一致的宽度 */
-    margin: 30px auto; /* 垂直外边距，水平自动居中 */
-    padding: 20px 0; /* 上下内边距，左右由内部内容控制 */
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px 0;
 }
 
 .education h2 {
     color: #E1E1E3;
-    font-size: 2.0em; /* 保持和 biography h2 一致 */
-    margin-bottom: 30px; /* 标题和时间线之间的距离 */
-    text-align: left; /* 保持左对齐 */
-    padding-left: 40px; /* 保持与 biography 内容对齐的左内边距 */
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 40px;
 }
 
 .education .timeline {
-    /* background-color: rgb(206, 206, 215); /* 调试用，可以移除 */
-    /* color: #000; /* 调试用，可以移除 */
-    position: relative; /* 作为 time-indicator 和 content 的定位父元素 */
-    width: 100%; /* timeline 占满 education 容器的宽度 */
-    padding-left: 40px; /* 保持与 biography 内容对齐的左内边距 */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .education .event {
-    /* background-color: rgb(183, 244, 13); /* 调试用，可以移除 */
-    position: relative; /* 仅作为内部元素（如果需要）的定位上下文，但这里主要靠 timeline 定位 */
-    margin-bottom: 40px; /* 增加事件之间的垂直间距 */
-    /* 关键：给 event 一个高度，防止内容塌陷，需要根据 content 的实际高度调整 */
-    min-height: 140px; /* 预估 content 盒子的高度，确保 event 容器能撑开 */
+    /* background-color: blueviolet; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* 确保内容不遮挡线 */
+    margin-bottom: 20px;
 }
 
-.education .event:last-child {
-    margin-bottom: 0; /* 最后一个事件底部不留空白 */
+.education .time-indicator {
+    /* background-color: #5aa9e6; */
+    position: relative;
+    /* ✨ 必须加这一行 */
+    width: 35%;
+    text-align: center;
+    font-size: 1.25em;
+    color: #E1E1E3;
+    white-space: nowrap;
 }
 
-/* time-indicator 作为绝对定位，并占据 25% 宽度 */
-.education .event .time-indicator {
-    /* background-color: rgb(210, 136, 7); /* 调试用，可以移除 */
-    position: absolute;
-    left: 0; /* 相对于 timeline 的 padding-left 后的 0 位置 */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25%; /* 这就是你想要的“1份”宽度 */
-    color: #E1E1E3; /* 调试时颜色可能被背景色覆盖，最终需要改回 */
-    font-size: 1.0em;
-    padding-right: 10px; /* 稍微留点空间给线，调整这个值 */
-    text-align: center; /* 让时间文字右对齐，靠近线 */
-    white-space: nowrap; /* 防止时间文字换行 */
-    z-index: 2; /* 确保时间指示器在最上层 */
-    box-sizing: border-box; /* 确保 padding 包含在 width 内 */
-}
-
-.education .line {
-    position: absolute;
-    /* 关键：线条的 left 位置，是 time-indicator 的宽度（25%） + 它的 padding-right */
-    left: calc(12.5% + 7px); /* time-indicator 的 width + padding-right */
-    top: calc(50% + 20px); /* 从 event 顶部开始 */
-    width: 2px;
-    height: 100%; /* 线条高度撑满整个 event */
-    background-color: #777;
-    border-radius: 0;
-    z-index: 1; /* 确保线在内容和时间指示器之间 */
-}
-
-.education .event:last-of-type .line {
-    height: calc(50% + 20px); /* 最后一个事件的线可以根据 event content 的高度适当调整 */
-    top: 0;
-}
-
-/* content 作为绝对定位，占据 75% 宽度，并从右侧开始 */
 .education .content {
-    position: absolute; /* 关键：改为 absolute 定位 */
-    top: 0; /* 贴紧 event 顶部 */
-    right: 0; /* 关键：右对齐 */
-    /* 宽度设置为 75% */
-    width: 75%; /* 你想要的“3份”宽度 */
-    /* background-color: #353535; */ /* 调试用，可以移除 */
-    border-radius: 8px;
+    width: 65%;
+    background-color: #353535;
+    display: flex;
+    align-items: center;
     padding: 20px;
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 0; /* 确保内容盒子在时间线层之下 */
-    display: flex; /* 内部布局保持 flex */
-    align-items: center;
-    box-sizing: border-box; /* 确保 padding 包含在 width 内 */
-    /* 移除之前的 margin-left，现在靠 left 和 right 来决定位置和宽度 */
 }
 
 .education .content:hover {
@@ -99,7 +61,7 @@
     height: 80px;
     border-radius: 50%;
     margin-right: 20px;
-    border: 2px solid #5aa9e6;
+    border: 3px solid #ffffff;
     object-fit: cover;
 }
 
@@ -116,54 +78,50 @@
     line-height: 1.5;
 }
 
-/* 媒体查询 */
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .education {
         width: 90%;
         padding: 15px 0;
     }
-    
+
     .education h2 {
         text-align: center;
         padding-left: 0;
         margin-bottom: 20px;
     }
 
-    .education .timeline {
-        padding-left: 0;
-    }
-
     .education .event {
-        min-height: auto; /* 小屏幕下不需要固定高度 */
-        padding-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
     }
 
-    .education .event .time-indicator,
-    .education .line {
-        display: none;
+    .education .time-indicator {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .education .content {
-        position: relative; /* 小屏幕下 content 变回 relative，避免脱离文档流 */
-        top: auto;
-        left: auto;
-        right: auto;
-        width: 100%; /* 占满宽度 */
-        margin-left: 0; /* 移除任何 margin-left */
+        width: 100%;
         flex-direction: column;
         text-align: center;
         padding: 15px;
     }
 
     .education .content img {
-        margin-right: 0;
         margin-bottom: 15px;
+        margin-right: 0;
     }
 
     .education .content .info h3 {
         font-size: 1.1em;
     }
+
     .education .content .info p {
         font-size: 0.9em;
     }
+
 }

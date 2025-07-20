@@ -1,108 +1,238 @@
+/* experience.css */
+
 .experience {
-    background-color: #353535;
+    color: #E1E1E3; /* Text color for the section */
+    width: 80%; /* Consistent width with other main sections */
+    margin: 30px auto; /* Vertical margin and horizontal centering for the section */
+    padding: 20px 0; /* Vertical padding; horizontal padding is handled by inner elements */
+}
+
+.experience h2 {
     color: #E1E1E3;
-    padding: 10px 5% 10px 5%;
-    margin: 0;
-    width: 100%;
+    font-size: 2.0em; /* Consistent font size for main titles */
+    margin-bottom: 30px; /* Space between title and card container */
+    text-align: left; /* Left alignment for the title */
+    padding-left: 40px; /* Left padding to align with other section content's text */
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-    grid-gap: 20px;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
+    /* Responsive grid: auto-fit columns with a minimum width of 280px and grow to fill available space */
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 30px; /* Gap between grid items (cards) */
+    justify-content: center; /* Center the grid items horizontally */
+    margin-top: 20px; /* Margin from the title */
 }
 
 .card {
     position: relative;
-
-    height: 450px;
-    background-color: #fff;
+    height: 500px; /* Fixed height for consistent card size. Adjust if content overflows significantly. */
+    background-color: #353535; /* Card background color */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    overflow: hidden;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures content stays within bounds */
+    color: #E1E1E3; /* Default text color inside the card */
+    cursor: default; /* Default cursor, as buttons handle clicks */
 
-    color: #323232;
+    /* Removed 3D flip specific properties */
+    /* transform-style: preserve-3d; */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Only for hover effect */
 }
 
+/* Unified hover effect: Scale up */
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    transform: scale(1.03); /* Card scales up on hover, consistent with Resume */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
 }
 
-/* .card:not(:hover) {
-    filter: blur(1.5px);
-} */
+/* No .card.active for transform, only for content display */
 
 .card h3 {
-    font-size: 21px;
+    font-size: 1.4em; /* Title font size */
+    margin-bottom: 15px; /* Space below title */
+    color: aquamarine; /* Title color, consistent with links */
+    line-height: 1.3;
 }
 
 .card p {
-    display: block;
-    text-indent: 0;
-    font-size: 18px;
+    font-size: 1.0em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #bdbdbd; /* Paragraph text color */
 }
 
+.card p strong {
+    color: #E1E1E3; /* Strong text color */
+}
+
+/* Brief (Front side of the card) Styles */
 .brief {
+    position: absolute; /* Position briefly to fill the card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px; /* Inner padding for the brief content */
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    justify-content: space-between; /* Distributes content and pushes button to bottom */
+    /* backface-visibility: hidden; /* No longer needed without 3D flip */
+    transition: opacity 0.4s ease; /* Smooth fade for showing/hiding */
+    box-sizing: border-box; /* Includes padding in width/height */
+    opacity: 1; /* Initially visible */
+    pointer-events: auto; /* Initially interactive */
 }
 
-.card .brief {
-    display: block;
+/* Detail (Back/Expanded side of the card) Styles */
+.detail {
+    position: absolute; /* Position detail to fill the card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px; /* Inner padding for the detail content */
+    display: flex;
+    flex-direction: column;
+    /* backface-visibility: hidden; /* No longer needed without 3D flip */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Disables interaction when hidden */
+    box-sizing: border-box;
+    color: #E1E1E3;
+    transition: opacity 0.4s ease; /* Smooth fade for showing/hiding */
 }
 
-.card .detail {
-    display: none;
-    
-}
-
+/* When the card is active (content toggled) */
 .card.active .brief {
-    display: none;
+    opacity: 0; /* Fade out brief */
+    pointer-events: none; /* Disable interaction on hidden brief */
 }
 
 .card.active .detail {
+    opacity: 1; /* Fade in detail */
+    pointer-events: auto; /* Enable interaction on visible detail */
+}
+
+/* Brief internal elements (Date, Organization) */
+.brief .title {
+    margin-bottom: 10px;
+}
+
+.brief .date,
+.brief .organization {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.card .view-detail-btn,
+.card .back-btn {
     display: block;
-}
-.brief {
-    height: 100%;
-}
-
-
-.brief .title{
-    height:30%;
-}
-
-.brief .organization{
-    min-height: 34%;
+    width: fit-content;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.brief .tips{
-    font-size: 15px;
-    text-align: end;
-}
-
-.detail p{
-    margin-top: 0;
-}
-
-.detail ul{
-    margin-left: 10%;
-    margin-top: -10px;
-}
-
-.detail ul li{
-    font-size: 15px;
-}
-
-.detail ul li a{
+.card .view-detail-btn {
+    background-color: aquamarine;
     color: #323232;
+    border: none;
+    align-self: flex-end; /* Align to the right in brief */
+}
+
+.card .view-detail-btn:hover {
+    background-color: #7fffd4;
+    transform: translateY(-2px);
+}
+
+.card .back-btn {
+    background-color: #555;
+    color: #E1E1E3;
+    border: none;
+    align-self: flex-end; /* Align to the left in detail */
+}
+
+.card .back-btn:hover {
+    background-color: #777;
+    transform: translateY(-2px);
+}
+
+/* Detail internal elements (Brief paragraph, List items) */
+.detail p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.0em;
+    color: #bdbdbd;
+}
+
+.detail ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 0px;
+    padding: 0;
+    flex-grow: 1;
+    color: #bdbdbd;
+}
+
+.detail ul li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.detail ul li:last-child {
+    margin-bottom: 0;
+}
+
+.detail ul li a {
+    color: aquamarine;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.detail ul li a:hover {
+    text-decoration: underline;
+    color: #7fffd4;
+}
+
+/* Responsive Design (Media Queries) */
+@media screen and (max-width: 992px) {
+    .experience {
+        width: 90%;
+        padding: 15px 0;
+        margin: 20px auto;
+    }
+
+    .experience h2 {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Single column layout for cards on smaller screens */
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .card {
+        height: auto;
+        min-height: 350px; /* Minimum height for better presentation */
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p, .detail ul li {
+        font-size: 0.9em;
+    }
 }
