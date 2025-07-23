@@ -2,7 +2,7 @@
 
 .contact {
     color: #E1E1E3; /* Text color */
-    width: 80%; /* Consistent width with other sections */
+    width: 80vw; /* Consistent width with other sections */
     margin: 30px auto; /* Vertical margin and horizontal centering */
     padding: 20px 0; /* Vertical padding; horizontal padding controlled by inner elements */
 }

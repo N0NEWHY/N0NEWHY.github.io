@@ -3,12 +3,19 @@
   "header_resume": "个人简历",
   "header_projects": "一些项目",
   "header_contact": "联系方式",
-
   "home_hi": "你好！",
   "home_intro": "这里是 NONE。",
-  "home_name": "王宏宇 🔥",
-
+  "home_name": "王宏宇 <br>🔥",
   "biography_title": "自我描述",
-  "biography_p1": "&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an MRes in Medical Robotics and Image-Guided Intervention at <a href=\\\"https://www.imperial.ac.uk/\\\">Imperial College London</a> in London. I previously studied Information and Computing Science at <a href=\\\"https://www.xjtlu.edu.cn/en\\\">XJTLU</a> in Suzhou."
-
+  "biography_p1": "&#x1F44B; 你好！我是王宏宇，目前在英国帝国理工学院（Imperial College London）攻读 <strong>医疗机器人与图像引导干预（MRes in Medical Robotics and Image-Guided Intervention）</strong> 硕士研究。我的研究由 <a href='https://profiles.imperial.ac.uk/daniel.elson'>Daniel Elson 教授（帝国理工）</a> 和 <a href='https://www.liverpool.ac.uk/people/baoru-huang'>黄宝如教授（利物浦大学 / 帝国理工）</a> 共同指导，课题聚焦于 <strong>用于外科视频分析的下一步动作预测</strong>，通过融合计算机视觉与时序建模技术，开发实时外科手术辅助系统。",
+  "biography_p2": "<strong>此前</strong>，我在 <a href='https://www.xjtlu.edu.cn/en/'>西交利物浦大学</a> 获得了 <strong>信息与计算科学</strong> 专业的一等荣誉学士学位（GPA 3.9/4.0）。本科期间，我在 X-CHI Lab 担任研究助理，师从 <a href='https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=437'>梁海宁教授（现任香港科技大学，曾任教于利物浦大学与西交利物浦大学）</a>，研究方向涵盖人机交互、虚拟现实与混合现实（XR），主要使用 Unity3D 进行开发，并在多篇发表论文中做出核心贡献。",
+  "biography_p3": "在学术之外，我对前沿科技充满热情，尤其喜欢动手实践，深入探索 <strong>本地大模型（Local LLM）、AIGC 与 AI 智能体（Agent）</strong> 等领域。我尤其热衷于构建强健的系统提示词（System Prompt），使大语言模型在特定任务中具备更接近人类的理解与应答能力。观察一个清晰的人设与结构化任务指令组合下的“AI 魔法”展现，是我持续探索的动力之一。",
+  "biography_p4": "我的驱动力源于对技术的深度好奇与不断突破边界的渴望，我乐于持续学习并将所学应用于实际问题，致力于创造具有创新性的解决方案。也许从更深层来说，这种动力也来自一种略带浪漫的雄心——就像电影《银翼杀手2049》中“每个人都渴望拥有一个 Joi”那样，去打造一个真正懂你、能与你连接的 AI，让未来的想象成为现实。",
+  "education_title": "教育经历",
+  "education_master_title": "医学机器人与图像引导干预 &nbsp; 硕士研究课程",
+  "education_master_school": "英国帝国理工学院 - QS 排名第 2",
+  "education_master_status": "在读 | 全日制",
+  "education_bachelor_title": "信息与计算科学 学士学位",
+  "education_bachelor_school": "西交利物浦大学 & 利物浦大学（双学位）",
+  "education_bachelor_status": "绩点：3.89 / 4.00 | 前5% | 一等荣誉学位 | 全日制"
 }

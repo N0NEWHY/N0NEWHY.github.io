@@ -5,7 +5,7 @@
   /*background-color: rgb(254, 157, 0);/**/
   color: #E1E1E3;
   /* 关键调整：让 resume 模块整体宽度和 biography/education 对齐，并通过 margin auto 居中 */
-  width: 80%;
+  width: 80vw;
   /* 和 biography/education 保持一致的宽度 */
   margin: 30px auto;
   /* 垂直外边距，水平自动居中，与前面模块保持间隔 */
@@ -104,10 +104,6 @@
 
 /* 媒体查询：适配小屏幕 */
 @media screen and (max-width: 992px) {
-  .resume {
-    width: 90%;
-        padding: 15px 0;
-  }
 
   .resume h2 {
     text-align: center;

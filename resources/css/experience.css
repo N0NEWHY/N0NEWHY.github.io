@@ -1,57 +1,124 @@
 /* experience.css */
 
 .experience {
-    color: #E1E1E3; /* Text color for the section */
-    width: 80%; /* Consistent width with other main sections */
-    margin: 30px auto; /* Vertical margin and horizontal centering for the section */
-    padding: 20px 0; /* Vertical padding; horizontal padding is handled by inner elements */
+    color: #E1E1E3;
+    /* Text color for the section */
+    width: 80vw;
+    /* Consistent width with other main sections */
+    margin: 30px auto;
+    /* Vertical margin and horizontal centering for the section */
+    padding: 20px 0;
+    /* Vertical padding; horizontal padding is handled by inner elements */
 }
 
 .experience h2 {
     color: #E1E1E3;
-    font-size: 2.0em; /* Consistent font size for main titles */
-    margin-bottom: 30px; /* Space between title and card container */
-    text-align: left; /* Left alignment for the title */
-    padding-left: 40px; /* Left padding to align with other section content's text */
+    font-size: 2.0em;
+    /* Consistent font size for main titles */
+    margin-bottom: 30px;
+    /* Space between title and card container */
+    text-align: left;
+    /* Left alignment for the title */
+    padding-left: 40px;
+    /* Left padding to align with other section content's text */
+}
+
+/* 新增：筛选器容器的样式 */
+.filter-container {
+    display: flex;
+    /* 让下拉菜单并排显示 */
+    flex-wrap: wrap;
+    /* 空间不足时自动换行 */
+    gap: 15px;
+    /* 下拉菜单之间的间距 */
+
+    justify-content: flex-end;
+    /* 靠左对齐 */
+}
+
+.filter-container select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #353535;
+    color: #E1E1E3;
+    font-size: 1.0em;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    -webkit-appearance: none;
+    /* 移除默认的系统样式 */
+    -moz-appearance: none;
+    appearance: none;
+    /* 为自定义箭头留出空间，如果你想添加自定义箭头的话 */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23E1E1E3%22%20d%3D%22M287%2069.6%20146.2%20205.2%205.4%2069.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+    /* 给箭头留出空间 */
+}
+
+.filter-container select:hover {
+    border-color: aquamarine;
+    background-color: #454545;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: aquamarine;
+    box-shadow: 0 0 0 2px rgba(aquamarine, 0.5);
 }
 
 .card-container {
     display: grid;
     /* Responsive grid: auto-fit columns with a minimum width of 280px and grow to fill available space */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Gap between grid items (cards) */
-    padding: 0 40px; /* Horizontal padding for the card container to align with main section content */
-    justify-content: center; /* Center the grid items horizontally */
-    margin-top: 20px; /* Margin from the title */
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 30px;
+    /* Gap between grid items (cards) */
+    justify-content: center;
+    /* Center the grid items horizontally */
+    margin-top: 20px;
+    /* Margin from the title */
 }
 
 .card {
     position: relative;
-    height: 400px; /* Fixed height for consistent card size. Adjust if content overflows significantly. */
-    background-color: #353535; /* Card background color */
+    height: 500px;
+    /* Fixed height for consistent card size. Adjust if content overflows significantly. */
+    background-color: #353535;
+    /* Card background color */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Ensures content stays within bounds */
-    color: #E1E1E3; /* Default text color inside the card */
-    cursor: default; /* Default cursor, as buttons handle clicks */
-
+    overflow: hidden;
+    /* Ensures content stays within bounds */
+    color: #E1E1E3;
+    /* Default text color inside the card */
+    cursor: default;
+    /* Default cursor, as buttons handle clicks */
+    
     /* Removed 3D flip specific properties */
     /* transform-style: preserve-3d; */
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Only for hover effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Only for hover effect */
 }
 
 /* Unified hover effect: Scale up */
 .card:hover {
-    transform: scale(1.03); /* Card scales up on hover, consistent with Resume */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+    transform: scale(1.03);
+    /* Card scales up on hover, consistent with Resume */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    /* Deeper shadow on hover */
 }
 
 /* No .card.active for transform, only for content display */
 
 .card h3 {
-    font-size: 1.4em; /* Title font size */
-    margin-bottom: 15px; /* Space below title */
-    color: aquamarine; /* Title color, consistent with links */
+    font-size: 1.4em;
+    /* Title font size */
+    margin-bottom: 15px;
+    /* Space below title */
+    color: aquamarine;
+    /* Title color, consistent with links */
     line-height: 1.3;
 }
 
@@ -59,70 +126,103 @@
     font-size: 1.0em;
     margin-bottom: 10px;
     line-height: 1.6;
-    color: #bdbdbd; /* Paragraph text color */
+    color: #bdbdbd;
+    /* Paragraph text color */
 }
 
 .card p strong {
-    color: #E1E1E3; /* Strong text color */
+    color: #E1E1E3;
+    /* Strong text color */
 }
 
 /* Brief (Front side of the card) Styles */
 .brief {
-    position: absolute; /* Position briefly to fill the card */
+    position: absolute;
+    /* Position briefly to fill the card */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 25px; /* Inner padding for the brief content */
+    padding: 25px;
+    /* Inner padding for the brief content */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distributes content and pushes button to bottom */
-    /* backface-visibility: hidden; /* No longer needed without 3D flip */
-    transition: opacity 0.4s ease; /* Smooth fade for showing/hiding */
-    box-sizing: border-box; /* Includes padding in width/height */
-    opacity: 1; /* Initially visible */
-    pointer-events: auto; /* Initially interactive */
+
+    transition: opacity 0.4s ease;
+    /* Smooth fade for showing/hiding */
+    box-sizing: border-box;
+    /* Includes padding in width/height */
+    opacity: 1;
+    /* Initially visible */
+    pointer-events: auto;
+    /* Initially interactive */
 }
 
 /* Detail (Back/Expanded side of the card) Styles */
 .detail {
-    position: absolute; /* Position detail to fill the card */
+    position: absolute;
+    /* Position detail to fill the card */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 25px; /* Inner padding for the detail content */
+    padding: 25px;
+    /* Inner padding for the detail content */
     display: flex;
     flex-direction: column;
     /* backface-visibility: hidden; /* No longer needed without 3D flip */
-    opacity: 0; /* Initially hidden */
-    pointer-events: none; /* Disables interaction when hidden */
+    opacity: 0;
+    /* Initially hidden */
+    pointer-events: none;
+    /* Disables interaction when hidden */
     box-sizing: border-box;
     color: #E1E1E3;
-    transition: opacity 0.4s ease; /* Smooth fade for showing/hiding */
+    transition: opacity 0.4s ease;
+    /* Smooth fade for showing/hiding */
 }
 
 /* When the card is active (content toggled) */
 .card.active .brief {
-    opacity: 0; /* Fade out brief */
-    pointer-events: none; /* Disable interaction on hidden brief */
+    opacity: 0;
+    /* Fade out brief */
+    pointer-events: none;
+    /* Disable interaction on hidden brief */
 }
 
 .card.active .detail {
-    opacity: 1; /* Fade in detail */
-    pointer-events: auto; /* Enable interaction on visible detail */
+    opacity: 1;
+    /* Fade in detail */
+    pointer-events: auto;
+    /* Enable interaction on visible detail */
 }
 
 /* Brief internal elements (Date, Organization) */
 .brief .title {
+
     margin-bottom: 10px;
+    display: flex;
+
 }
 
+/* 调整 .brief .o&d 容器的样式 */
+.brief .o\&d { /* 注意：由于 & 符号在CSS选择器中是特殊字符，需要用反斜杠 \ 转义 */
+    display: flex; /* 启用 Flexbox 布局 */
+    flex-direction: row; /* 保持它们横向排列 */
+    justify-content: space-between; /* 关键：让第一个子元素（organization）靠左，第二个（date）靠右，并尽可能拉开距离 */
+    align-items: center; /* 垂直居中对齐，如果高度不同的话 */
+    width: 100%; /* 确保占据父容器的全部宽度，这样 space-between 才能起作用 */
+    margin-bottom: 10px; /* 给这个容器一个下边距，与下方内容分隔 */
+    /* background-color: chartreuse; /* 这个背景色可以暂时保留用于调试，完成后移除 */
+}
+
+/* 调整 .brief .date 和 .brief .organization 的样式 */
 .brief .date,
 .brief .organization {
-    margin-bottom: 10px;
+    /* background-color: brown; /* 这个背景色也可以暂时保留用于调试 */
+    margin-bottom: 0; /* 在 flex 容器中，这里的 margin-bottom 可以移除，避免不必要的空间 */
     font-size: 0.95em;
     line-height: 1.5;
+    /* 不再需要 text-align，因为父级的 justify-content 会控制它们的位置 */
 }
 
 /* Button Styles */
@@ -136,7 +236,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: auto;
+
     text-decoration: none;
     white-space: nowrap;
 }
@@ -145,7 +245,8 @@
     background-color: aquamarine;
     color: #323232;
     border: none;
-    align-self: flex-end; /* Align to the right in brief */
+    align-self: flex-end;
+    /* Align to the right in brief */
 }
 
 .card .view-detail-btn:hover {
@@ -157,7 +258,8 @@
     background-color: #555;
     color: #E1E1E3;
     border: none;
-    align-self: flex-start; /* Align to the left in detail */
+    align-self: flex-end;
+    /* Align to the left in detail */
 }
 
 .card .back-btn:hover {
@@ -203,13 +305,51 @@
     color: #7fffd4;
 }
 
+/* Tag Styles for visual appearance */
+.tags {
+    background-color: blueviolet;
+    display: flex;
+    /* 让标签并排显示 */
+    flex-wrap: wrap;
+    /* 空间不足时自动换行 */
+    gap: 8px;
+    /* 标签之间的间距 */
+    
+    /* 标签下方留出空间 */
+    margin-top: auto; /* 将标签推到底部，如果内容不多的话 */
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: aquamarine;
+    /* 标签背景色，与按钮颜色呼应 */
+    color: #323232;
+    /* 标签文字颜色 */
+    border-radius: 4px;
+    /* 圆角 */
+    padding: 4px 10px;
+    /* 内边距 */
+    font-size: 0.85em;
+    /* 字体大小 */
+    font-weight: 600;
+    /* 加粗 */
+    white-space: nowrap;
+    /* 防止标签文本换行 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* 增加一点阴影，更有立体感 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag:hover {
+    transform: translateY(-1px);
+    /* 鼠标悬停时轻微上移 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* 阴影加深 */
+}
+
 /* Responsive Design (Media Queries) */
-@media screen and (max-width: 768px) {
-    .experience {
-        width: 90%;
-        padding: 15px 0;
-        margin: 20px auto;
-    }
+@media screen and (max-width: 992px) {
+
 
     .experience h2 {
         text-align: center;
@@ -218,14 +358,15 @@
     }
 
     .card-container {
-        grid-template-columns: 1fr; /* Single column layout for cards on smaller screens */
+        grid-template-columns: 1fr;
+        /* Single column layout for cards on smaller screens */
         gap: 25px;
-        padding: 0 20px;
     }
 
     .card {
         height: auto;
-        min-height: 350px; /* Minimum height for better presentation */
+        min-height: 350px;
+        /* Minimum height for better presentation */
         padding: 20px;
     }
 
@@ -233,7 +374,8 @@
         font-size: 1.2em;
     }
 
-    .card p, .detail ul li {
+    .card p,
+    .detail ul li {
         font-size: 0.9em;
     }
 }

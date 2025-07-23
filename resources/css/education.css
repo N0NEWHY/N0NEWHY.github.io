@@ -1,7 +1,7 @@
 .education {
     /* background-color: rgb(7, 144, 98); */
     color: #E1E1E3;
-    width: 80%;
+    width: 80vw;
     margin: 30px auto;
     padding: 20px 0;
 }
@@ -81,11 +81,7 @@
 
 /* Responsive Design */
 @media screen and (max-width: 992px) {
-    .education {
-        
-        width: 90%;
-        padding: 15px 0;
-    }
+
 
     .education h2 {
         text-align: center;
@@ -96,7 +92,6 @@
     .education .event {
         flex-direction: column;
         align-items: center;
-        padding: 15px;
     }
 
     .education .time-indicator {

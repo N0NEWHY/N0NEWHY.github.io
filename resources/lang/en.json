@@ -3,11 +3,19 @@
     "header_resume": "Resume",
     "header_projects": "Projects",
     "header_contact": "Contact",
-
     "home_hi": "HI!",
     "home_intro": "THIS IS NONE.",
     "home_name": "HONGYU Wang 🔥",
-
     "biography_title": "Biography",
-    "biography_p1": "&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an MRes in Medical Robotics and Image-Guided Intervention at <a href=\\\"https://www.imperial.ac.uk/\\\">Imperial College London</a> in London. I previously studied Information and Computing Science at <a href=\\\"https://www.xjtlu.edu.cn/en\\\">XJTLU</a> in Suzhou."
+    "biography_p1": "&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an <strong>MRes in Medical Robotics and Image-Guided Intervention</strong> at <a href='https: //www.imperial.ac.uk/'>Imperial College London</a> in London, UK. My research, supervised by <a href='https://profiles.imperial.ac.uk/daniel.elson'> Prof. Daniel Elson (ICL)</a> and <a href='https://www.liverpool.ac.uk/people/baoru-huang'>Prof. Baoru Huang (UoL & ICL)</a>, focuses on <strong>Next-action planning for surgical video analysis</strong>, integrating computer vision and temporal modeling to develop real-time surgical assistance systems.",
+    "biography_p2": "<strong>Previously</strong>, I earned my <strong>First-Class Honors degree ( 3.9 / 4.0 )</strong> in <strong>Information and Computing Science</strong> from <a href='https://www.xjtlu.edu.cn/en/'>Xi'an Jiaotong-Liverpool University</a>. During my undergraduate studies, I worked with <a href='https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=437'>Prof.Hai-Ning Liang (now at HKUST, formerly UoL & XJTLU)</a> as a research assistant at X-CHI Lab. There, I specialized in Human-Computer Interaction, Virtual Reality, and Mixed Reality (XR), primarily utilizing Unity3D for development, and contributed significantly to several published papers.",
+    "biography_p3": "Beyond my academic pursuits, I'm genuinely passionate about exploring cutting-edge technologies. I enjoy delving into fields like <strong>Local LLMs, AIGC, and AI Agents</strong>, often adopting a hands-on approach to understand and master them. A particular fascination of mine lies in crafting robust System Prompts that empower LLMs to reason and respond with human-like nuance and effectiveness in specific tasks. It's truly intriguing to witness the 'magic' unfold when a well-defined core character and a carefully structured task are combined within a base system prompt.",
+    "biography_p4": "My drive comes from a deep curiosity and a commitment to push technological boundaries, constantly learning and applying new knowledge to create innovative solutions. Perhaps, at a deeper level, it's also fueled by a bit of playful ambition, much like the idea that 'everyone wants a <strong>Joi</strong> from <strong>Blade Runner 2049</strong>' – to craft AI that truly understands and connects, bringing a touch of that future magic into reality.",
+    "education_title": "Education",
+    "education_master_title":"MRes in Medical Robotics and Image Guided Intervention",
+    "education_master_school":"Imperial College London - QS Rank 2",
+    "education_master_status": "Expected | Full-time",
+    "education_bachelor_title":"BSc in Information and Computing Science",
+    "education_bachelor_school":"Xi'an Jiaotong-Liverpool University & University of Liverpool (Dual Degree)",
+    "education_bachelor_status":"GPA: 3.89 / 4.00 | Top 5% | First Class Honours | Full-time"
 }

@@ -1,9 +1,8 @@
 /* publication.css */
 
 .publication {
-    background-color: burlywood;
     color: #E1E1E3; /* Consistent text color */
-    width: 80%; /* Consistent width with other main sections */
+    width: 80vw; /* Consistent width with other main sections */
     margin: 30px auto; /* Vertical margin and horizontal centering */
     padding: 20px 0; /* Vertical padding; horizontal padding handled by inner elements */
 }
@@ -83,11 +82,6 @@
 
 /* Responsive Design (Media Queries) */
 @media screen and (max-width: 992px) {
-    .publication {
-        width: 80%; /* Adjusted width for smaller screens */
-        padding: 15px 0;
-        margin: 20px auto;
-    }
 
     .publication h2 {
         text-align: center; /* Center title on smaller screens */
@@ -98,7 +92,6 @@
     .publication-container {
         grid-template-columns: 1fr; /* Single column layout for cards on smaller screens */
         gap: 25px;
-        padding: 0 20px; /* Adjusted padding for smaller screens */
     }
 
     .publication-item {

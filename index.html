@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -60,24 +60,25 @@
 
 			<h2 data-i18n="biography_title">Biography</h2>
 			<p data-i18n="biography_p1">
-				&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an MRes in Medical Robotics and Image-Guided
-				Intervention at
-				<a href="https://www.imperial.ac.uk/">Imperial College London</a> in London, .
+				&#x1F44B; Greetings! I'm Wang Hongyu, currently pursuing an <strong>MRes in Medical Robotics and Image-Guided Intervention</strong> at <a href='https: //www.imperial.ac.uk/'>Imperial College London</a> in London, UK. My research, supervised by <a href='https://profiles.imperial.ac.uk/daniel.elson'> Prof. Daniel Elson (ICL)</a> and <a href='https://www.liverpool.ac.uk/people/baoru-huang'>Prof. Baoru Huang (UoL & ICL)</a>, focuses on <strong>Next-action planning for surgical video analysis</strong>, integrating computer vision and temporal modeling to develop real-time surgical assistance systems.
 			</p>
 
-			<p>
-				My academic journey has been fueled by a curiosity for technology, leading me to explore various
-				aspects of Information and Computing Science. I find particular excitement in the realms of Virtual
-				Reality (VR), Augmented Reality (AR), Extended Reality (XR), and Game Development.
+			<p data-i18n="biography_p2">
+				Previously, I earned my First-Class Honors degree (3.9/4.0) in Information and Computing Science from
+				Xi'an Jiaotong-Liverpool University. During my undergraduate studies, I was a core developer at
+				Professor Haining Liang's X-CHI Lab (now at Hong Kong University of Science and Technology, formerly
+				University of Liverpool and XJTLU). There, I specialized in Human-Computer Interaction, Virtual Reality,
+				and Mixed Reality (XR), primarily utilizing Unity3D for development, and contributed significantly to
+				several published papers.
 			</p>
 
-			<p>
+			<p data-i18n="biography_p3">
 				Beyond my studies, I harbor a keen interest in computer vision topics, including stable diffusion
 				and nerf. I believe in the power of technology to shape innovative solutions and enhance our
 				understanding of the world.
 			</p>
 
-			<p>
+			<p data-i18n="biography_p4">
 				Currently, I am engaged as a research assistant at X-CHI Lab, XJTLU, working alongside Professor <a
 					href="https://scholar.google.com/citations?user=UJPH5ioAAAAJ&hl=en">Hai-Ning Liang</a>. This
 				experience allows me to delve deeper into the fascinating intersection of academia and practical
@@ -87,10 +88,10 @@
 		</section>
 
 		<section id="education" class="education">
-			<h2>Education</h2>
+			<h2 data-i18n="education_title">Education</h2>
 
 			<div class="timeline">
-				<div class="event">
+				<!-- <div class="event">
 					<div class="time-indicator">&#x1F4DA; 09. 2024 - ??. 20??</div>
 
 					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
@@ -99,7 +100,7 @@
 							<h3>Future</h3>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="event">
 					<div class="time-indicator">&#x1F4DA; 09. 2024 - 09. 2025</div>
@@ -107,9 +108,9 @@
 					<div class="content" data-hover="Imperial College London">
 						<img src="./resources/imgs/icl.jpeg" alt="University Logo">
 						<div class="info">
-							<h3>MRes in Medical Robotics and Image Guided Intervention</h3>
-							<p>School: Imperial College London</p>
-							<p>Expected &nbsp;|&nbsp; Full-time</p>
+							<h3 data-i18n="education_master_title">MRes in Medical Robotics and Image Guided Intervention</h3>
+							<p data-i18n="education_master_school">Imperial College London - QS Rank 2</p>
+							<p data-i18n="education_master_status">Expected &nbsp;|&nbsp; Full-time</p>
 						</div>
 					</div>
 				</div>
@@ -120,9 +121,9 @@
 					<div class="content" data-hover="Xi'an Jiaotong-Liverpool University">
 						<img src="./resources/imgs/xjtlu.jpeg" alt="University Logo">
 						<div class="info">
-							<h3>BSc in Information and Computing Science</h3>
-							<p>School: Xi'an Jiaotong-Liverpool University</p>
-							<p>GPA: 3.89 / 4.00 &nbsp;|&nbsp; Top 5% &nbsp;|&nbsp; First Class Honours</p>
+							<h3 data-i18n="education_bachelor_title">BSc in Information and Computing Science</h3>
+							<p data-i18n="education_bachelor_school">Xi'an Jiaotong-Liverpool University & University of Liverpool (Dual Degree)</p>
+							<p data-i18n="education_bachelor_status">GPA: 3.89 / 4.00 &nbsp;|&nbsp; Top 5% &nbsp;|&nbsp; First Class Honours &nbsp;|&nbsp; Full-time</p>
 						</div>
 					</div>
 				</div>
@@ -162,18 +163,57 @@
 
 		<section id="experience" class="experience">
 			<h2>Projects Experiences</h2>
+			<div class="filter-container">
+				<select id="filterType" onchange="filterCards()">
+					<option value="">Project Type</option>
+					<option value="type-research">Research</option>
+					<option value="type-personal">Personal Project</option>
+				</select>
+
+				<select id="filterTech" onchange="filterCards()">
+					<option value="">Tech Stack</option>
+					<option value="tech-python">Python</option>
+					<option value="tech-react">React</option>
+					<!-- 更多技术栈选项 -->
+				</select>
+
+				<select id="filterDomain" onchange="filterCards()">
+					<option value="">Domain</option>
+					<option value="domain-ai">Artificial Intelligence</option>
+					<option value="domain-webdev">Web Development</option>
+					<!-- 更多领域选项 -->
+				</select>
+			</div>
 			<div class="card-container">
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">Imperial Data Science Online Summer School</h3>
-						<p class="date">
-							<strong>Date:</strong><br>
-							Jul.2022 – Aug.2022
-						</p>
-						<p class="organization">
-							<strong>Organization:</strong><br>
-							Imperial College London
-						</p>
+						<div class="o&d">
+							<p class="organization">
+
+								Imperial College London
+							</p>
+							<p class="date">
+								Jul.2022 – Aug.2022
+							</p>
+
+						</div>
+						<div class="desc">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione fugit, a, praesentium
+							saepe dolor recusandae culpa repudiandae commodi molestias aut nisi in ullam repellendus
+							tenetur nulla qui excepturi omnis doloribus sunt dolorem sed inventore. Tempora iusto culpa
+							debitis quidem inventore natus aperiam quia odio odit iste, dolores harum, nulla vitae eum
+							consequuntur enim reprehenderit. Sed vitae assumenda alias repellendus, id libero dicta
+							similique aliquid quam, impedit distinctio perferendis voluptatibus rerum nihil reiciendis
+							quasi nostrum sit eius ducimus quod? Praesentium vel, error facere placeat harum velit nam
+							inventore tenetur repellendus consequuntur nobis asperiores. Distinctio facere harum,
+							expedita delectus quas architecto sint.
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-personal">#PersonalProject</span>
+							<span class="tag" data-tag="tech-react">#React</span>
+							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+						</div>
 						<button class="view-detail-btn" data-target="detail-01">View Details</button>
 					</div>
 
@@ -194,14 +234,21 @@
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">Algorithmic biases in EDM(Education Data Mining)</h3>
-						<p class="date">
-							<strong>Date:</strong><br>
-							Jul.2022 – Aug.2022
-						</p>
-						<p class="organization">
-							<strong>Organization:</strong><br>
-							North Carolina State University
-						</p>
+						<div class="o&d">
+							<p class="organization">
+
+								Imperial College London
+							</p>
+							<p class="date">
+								Jul.2022 – Aug.2022
+							</p>
+
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-personal">#PersonalProject</span>
+							<span class="tag" data-tag="tech-react">#React</span>
+							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+						</div>
 						<button class="view-detail-btn" data-target="detail-02">View Details</button>
 					</div>
 
@@ -224,14 +271,24 @@
 				<div class="card">
 					<div class="brief">
 						<h3 class="title">2D Tower Defense Game "Cloud War"</h3>
-						<p class="date">
-							<strong>Date:</strong><br>
-							Dec.2022 – Apr.2023
-						</p>
-						<p class="organization">
-							<strong>Organization:</strong><br>
-							Timi X Sanjiao Cup Game Jam
-						</p>
+						<div class="o&d">
+							<p class="organization">
+
+								Imperial College London
+							</p>
+							<p class="date">
+								Jul.2022 – Aug.2022
+							</p>
+
+						</div>
+
+
+						<div class="tags">
+							<span class="tag" data-tag="type-personal">#PersonalProject</span>
+							<span class="tag" data-tag="tech-python">#Python</span>
+							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+						</div>
+
 						<button class="view-detail-btn" data-target="detail-03">View Details</button>
 					</div>
 
@@ -264,9 +321,10 @@
 							and Computer Graphics, 2024</span>
 					</p>
 					<p class="pub-abstract">
-						<strong>Abstract:</strong> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+						<strong>Abstract:</strong> <br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium perferendis neque
+						impedit nam beatae, rem voluptatibus expedita. Velit deleniti corporis commodi nulla error
+						aliquid quis itaque blanditiis sed rerum.
 					</p>
 					<p class="pub-keywords">
 						<strong>Key Words:</strong> A, B, C, D
@@ -285,7 +343,9 @@
 							2024</span>
 					</p>
 					<p class="pub-abstract">
-						<strong>Abstract:</strong> Another concise summary of your work, detailing methodology and
+						<strong>Abstract:</strong> <br>
+
+						Another concise summary of your work, detailing methodology and
 						results.
 					</p>
 					<p class="pub-keywords">

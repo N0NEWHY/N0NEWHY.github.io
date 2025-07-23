@@ -10,40 +10,38 @@
 body {
     background-color: #323232;
     color: #E1E1E3;
-    /* 新增：为了更好的居中效果，可以给body设置min-height，让内容垂直居中（如果需要）*/
-    min-height: 100vh; /* 确保body至少占满视口高度 */
-    display: flex; /* 使用Flexbox */
-    flex-direction: column; /* 垂直排列子项 */
-    align-items: center; /* 水平居中内容 */
-    justify-content: center; /* 垂直居中内容，如果内容高度小于视口，会推到中间 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; /* This might push content to center vertically if total height is less than viewport. Keep or remove based on overall page layout. */
+    padding: 20px; /* Added general body padding for better overall spacing */
 }
 
 .biography {
     background-color: #353535;
     color: #E1E1E3;
-    padding: 30px 40px; /* 稍微增加内边距，让内容更舒适 */
+    padding: 30px 40px; /* Inner padding for comfort */
     border-radius: 8px;
-    
-    /* 核心调整： */
-    width: 80%; /* 在小屏幕上仍然保持响应式，占宽度的90% */
-    margin: 15px auto; /* 垂直方向给20px外边距，水平方向自动居中 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加一点阴影，让它更有层次感 */
+    width: 80vw; /* Base width for larger screens */
+    margin: 15px auto; /* Vertical margin and horizontal centering */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .biography h2 {
     color: #E1E1E3;
-    margin-bottom: 20px; /* 标题下面增加一些间距 */
-    text-align: left; /* 标题默认左对齐，如果想居中再改成center */
+    margin-bottom: 20px;
+    text-align: left;
     font-size: 2.0em;
 }
 
-.biography p { 
+.biography p {
     margin-top: 2vh;
     font-size: 20px;
     margin-bottom: 2vh;
-    
     margin-bottom: 15px;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .biography a {
@@ -53,4 +51,19 @@ body {
 
 .biography a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design for screens smaller than 992px */
+@media screen and (max-width: 992px) {
+    .biography h2 {
+        font-size: 1.8em; /* Slightly smaller title font for smaller screens */
+        text-align: center; /* Center title on smaller screens */
+        padding-left: 0; /* Remove left padding for centering */
+    }
+
+    .biography p {
+        font-size: 18px; /* Slightly smaller paragraph font for smaller screens */
+        margin-top: 1.5vh;
+        margin-bottom: 1.5vh;
+    }
 }
