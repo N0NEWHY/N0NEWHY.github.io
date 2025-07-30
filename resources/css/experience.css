@@ -83,7 +83,7 @@
 
 .card {
     position: relative;
-    height: 500px;
+    height: 480px;
     /* Fixed height for consistent card size. Adjust if content overflows significantly. */
     background-color: #353535;
     /* Card background color */
@@ -307,7 +307,7 @@
 
 /* Tag Styles for visual appearance */
 .tags {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     display: flex;
     /* 让标签并排显示 */
     flex-wrap: wrap;
@@ -364,8 +364,7 @@
     }
 
     .card {
-        height: auto;
-        min-height: 350px;
+
         /* Minimum height for better presentation */
         padding: 20px;
     }

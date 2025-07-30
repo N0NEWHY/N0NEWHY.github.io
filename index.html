@@ -31,7 +31,7 @@
 			<ul>
 				<li><a href="#about-me" data-i18n="header_about">About Me</a></li>
 				<li><a href="#resume" data-i18n="header_resume">Resume</a></li>
-				<li><a href="#projects" data-i18n="header_projects">Projects</a></li>
+				<li><a href="#experience" data-i18n="header_projects">Projects</a></li>
 				<li><a href="#contact" data-i18n="header_contact">Contact</a></li>
 				<li>
 					<div class="lang-toggle">
@@ -133,27 +133,27 @@
 		</section>
 
 		<section id="resume" class="resume">
-			<h2>Resume</h2>
+			<h2 data-i18n="resume_title">Resume</h2>
 			<div class="resume_preview_container">
 
 				<!-- 中文简历 -->
 				<div class="resume_preview">
-					<a href="./resources/Curriculum_Vitae.pdf" target="_blank">
+					<a href="./resources/resumes/CN.pdf" target="_blank">
 						<img src="./resources/imgs/cv_cn_preview.jpg" alt="Resume Preview CN" class="resume_img" />
 					</a>
 					<p>
-						<a href="./resources/Curriculum_Vitae.pdf" target="_blank" class="download_link">Download CN</a>
+						<a href="./resources/resumes/CN.pdf" target="_blank" class="download_link" data-i18n="resume_zh">Download zh</a>
 					</p>
 				</div>
 
 				<!-- 英文简历 -->
 				<div class="resume_preview">
-					<a href="./resources/Curriculum_Vitae_Eng.pdf" target="_blank">
-						<img src="./resources/imgs/cv_cn_preview.jpg" alt="Resume Preview ENG" class="resume_img" />
+					<a href="./resources/resumes/CN.pdf" target="_blank">
+						<img src="./resources/imgs/cv_en_preview.jpg" alt="Resume Preview ENG" class="resume_img" />
 					</a>
 					<p>
-						<a href="./resources/Curriculum_Vitae_Eng.pdf" target="_blank" class="download_link">Download
-							ENG</a>
+						<a href="./resources/resumes/EN.pdf" target="_blank" class="download_link" data-i18n="resume_en">Download
+							en</a>
 					</p>
 				</div>
 
@@ -162,204 +162,363 @@
 
 
 		<section id="experience" class="experience">
-			<h2>Projects Experiences</h2>
+			<h2 data-i18n="experience_title">Projects Experiences</h2>
 			<div class="filter-container">
 				<select id="filterType" onchange="filterCards()">
-					<option value="">Project Type</option>
-					<option value="type-research">Research</option>
-					<option value="type-personal">Personal Project</option>
+					<option value="" data-i18n="experience_type_filter_all">Project Type</option>
+					<option value="type-research" data-i18n="experience_type_filter_research">Research</option>
+					<option value="type-personal" data-i18n="experience_type_filter_personal">Personal</option>
 				</select>
 
 				<select id="filterTech" onchange="filterCards()">
-					<option value="">Tech Stack</option>
+					<option value="" data-i18n="experience_tech_filter_all">Tech Stack</option>
 					<option value="tech-python">Python</option>
-					<option value="tech-react">React</option>
+					<option value="tech-pytorch">PyTorch</option>
+					<option value="tech-c#">C#</option>
+					<option value="tech-unity">Unity</option>
 					<!-- 更多技术栈选项 -->
 				</select>
 
 				<select id="filterDomain" onchange="filterCards()">
-					<option value="">Domain</option>
-					<option value="domain-ai">Artificial Intelligence</option>
-					<option value="domain-webdev">Web Development</option>
+					<option value="" data-i18n="experience_domain_filter_all">Domain</option>
+					<option value="domain-xr" data-i18n="experience_domain_filter_xr">XR (Extended Reality: VR + AR + MR)</option>
+					<option value="domain-hci" data-i18n="experience_domain_filter_hci">Human Computer Interaction</option>
+					<option value="domain-ml" data-i18n="experience_domain_filter_mldl">Machine Learning & Deep Learning</option>
+					<option value="domain-game" data-i18n="experience_domain_filter_game">Game Devlopment</option>
 					<!-- 更多领域选项 -->
 				</select>
 			</div>
+
+
 			<div class="card-container">
+				<!-- PROJECT 01 -->
 				<div class="card">
 					<div class="brief">
-						<h3 class="title">Imperial Data Science Online Summer School</h3>
+						<h3 class="title" data-i18n="p01_title">PROJECT CODE - NONE</h3>
 						<div class="o&d">
-							<p class="organization">
-
-								Imperial College London
+							<p class="organization" data-i18n="organization_ic">
+								UNITVERSITY NONE
 							</p>
-							<p class="date">
-								Jul.2022 – Aug.2022
+							<p class="date" data-i18n="p01_date">
+								PAST - FUTURE
 							</p>
 
 						</div>
-						<div class="desc">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione fugit, a, praesentium
-							saepe dolor recusandae culpa repudiandae commodi molestias aut nisi in ullam repellendus
-							tenetur nulla qui excepturi omnis doloribus sunt dolorem sed inventore. Tempora iusto culpa
-							debitis quidem inventore natus aperiam quia odio odit iste, dolores harum, nulla vitae eum
-							consequuntur enim reprehenderit. Sed vitae assumenda alias repellendus, id libero dicta
-							similique aliquid quam, impedit distinctio perferendis voluptatibus rerum nihil reiciendis
-							quasi nostrum sit eius ducimus quod? Praesentium vel, error facere placeat harum velit nam
-							inventore tenetur repellendus consequuntur nobis asperiores. Distinctio facere harum,
-							expedita delectus quas architecto sint.
+						<div class="desc" data-i18n="p01_desc">
+							A BRIEF DESCRIPTION
 						</div>
 						<div class="tags">
-							<span class="tag" data-tag="type-personal">#PersonalProject</span>
-							<span class="tag" data-tag="tech-react">#React</span>
-							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+							<span class="tag" data-tag="type-research" data-i18n="experience_type_tag_research"># NONE</span>
+							<span class="tag" data-tag="tech-python" data-i18n="experience_tech_tag_python"># NONE</span>
+							<span class="tag" data-tag="tech-pytorch" data-i18n="experience_tech_tag_pytorch"># NONE</span>
+							<span class="tag" data-tag="domain-ml" data-i18n="experience_domain_tag_mldl"># NONE</span>
 						</div>
-						<button class="view-detail-btn" data-target="detail-01">View Details</button>
+						<button class="view-detail-btn" data-target="detail-01" data-i18n="project_detail_btn">View Details</button>
 					</div>
 
 					<div class="detail">
-						<p><strong>Brief:</strong></p>
-						<ul>
-							<li>Completed a 6-week online summer school program on data science and machine learning at
-								Imperial College London</li>
-							<li>Utilized U-Net model to enhance brain tumor recognition and classification.</li>
-							<li>Preprocessed data using Albumentations library</li>
-							<li>Built and trained model using PyTorch</li>
-							<li>Evaluated model performance using dice and IoU metrics</li>
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p01_role">
+							<li>NONE</li>
 						</ul>
-						<button class="back-btn" data-target="brief-01">Back to Brief</button>
+						<button class="back-btn" data-target="brief-01" data-i18n="project_brief_btn">Back to Brief</button>
 					</div>
 				</div>
 
+				<!-- PROJECT 02 -->
 				<div class="card">
 					<div class="brief">
-						<h3 class="title">Algorithmic biases in EDM(Education Data Mining)</h3>
+						<h3 class="title" data-i18n="p02_title">PROJECT CODE - NONE</h3>
 						<div class="o&d">
-							<p class="organization">
-
-								Imperial College London
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
 							</p>
-							<p class="date">
-								Jul.2022 – Aug.2022
+							<p class="date" data-i18n="p02_date">
+								PAST - FUTURE
 							</p>
 
+						</div>
+						<div class="desc" data-i18n="p02_desc">
+							A BRIEF DESCRIPTION
 						</div>
 						<div class="tags">
-							<span class="tag" data-tag="type-personal">#PersonalProject</span>
-							<span class="tag" data-tag="tech-react">#React</span>
-							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+							<span class="tag" data-tag="type-research" data-i18n="experience_type_tag_research"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-hci" data-i18n="experience_domain_tag_hci"># NONE</span>
+							<span class="tag" data-tag="domain-xr" data-i18n="experience_domain_tag_xr"># NONE</span>
 						</div>
-						<button class="view-detail-btn" data-target="detail-02">View Details</button>
+						<button class="view-detail-btn" data-target="detail-02" data-i18n="project_detail_btn">View Details</button>
 					</div>
 
 					<div class="detail">
-						<p><strong>Brief:</strong><br></p>
-						<ul>
-							<li>Conducted experiments on multiple datasets with different distributions to explore the
-								impact of data distribution on prediction results</li>
-							<li>Analyzed the influence of different data preprocessing methods and models’ selection on
-								the accuracy and fairness for predicting the students’ learning outcomes</li>
-							<li>Compared different experiment results and evaluated methods to improve models or
-								algorithms performance</li>
-							<li>Presented research findings on algorithmic biases in Educational Data Mining (EDM) at
-								the judged poster presentation exhibit</li>
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p02_role">
+							<li>NONE</li>
 						</ul>
-						<button class="back-btn" data-target="brief-02">Back to Brief</button>
+						<button class="back-btn" data-target="brief-02" data-i18n="project_brief_btn">Back to Brief</button>
 					</div>
 				</div>
 
+				<!-- PROJECT 03 -->
 				<div class="card">
 					<div class="brief">
-						<h3 class="title">2D Tower Defense Game "Cloud War"</h3>
+						<h3 class="title" data-i18n="p03_title">PROJECT CODE - NONE</h3>
 						<div class="o&d">
-							<p class="organization">
-
-								Imperial College London
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
 							</p>
-							<p class="date">
-								Jul.2022 – Aug.2022
+							<p class="date" data-i18n="p03_date">
+								PAST - FUTURE
 							</p>
 
 						</div>
-
-
+						<div class="desc" data-i18n="p03_desc">
+							A BRIEF DESCRIPTION
+						</div>
 						<div class="tags">
-							<span class="tag" data-tag="type-personal">#PersonalProject</span>
-							<span class="tag" data-tag="tech-python">#Python</span>
-							<span class="tag" data-tag="domain-webdev">#WebDev</span>
+							<span class="tag" data-tag="type-research" data-i18n="experience_type_tag_research"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-hci" data-i18n="experience_domain_tag_hci"># NONE</span>
+							<span class="tag" data-tag="domain-xr" data-i18n="experience_domain_tag_xr"># NONE</span>
 						</div>
-
-						<button class="view-detail-btn" data-target="detail-03">View Details</button>
+						<button class="view-detail-btn" data-target="detail-03" data-i18n="project_detail_btn">View Details</button>
 					</div>
 
 					<div class="detail">
-						<p><strong>Brief:</strong></p>
-						<ul>
-							<li>Implemented game interface using UGUI, a grid-based map using the GridLayout component,
-								and object placement and fusion using mouse clicks and EventSystem.</li>
-							<li>Utilized collision detection, ray detection, and different LayerTag and Layer detection
-								layers for bullet hit and enemy skill release.</li>
-							<li><strong>Demo link:</strong> <a
-									href="https://www.bilibili.com/video/BV1CT411s7Bd/?spm_id_from=333.337.search-card.all.click"
-									target="_blank">Link</a></li>
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p03_role">
+							<li>NONE</li>
 						</ul>
-						<button class="back-btn" data-target="brief-03">Back to Brief</button>
+						<button class="back-btn" data-target="brief-03" data-i18n="project_brief_btn">Back to Brief</button>
 					</div>
 				</div>
+
+				<!-- PROJECT 04 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title" data-i18n="p04_title">PROJECT CODE - NONE</h3>
+						<div class="o&d">
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
+							</p>
+							<p class="date" data-i18n="p04_date">
+								PAST - FUTURE
+							</p>
+
+						</div>
+						<div class="desc" data-i18n="p04_desc">
+							A BRIEF DESCRIPTION
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-research" data-i18n="experience_type_tag_research"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-hci" data-i18n="experience_domain_tag_hci"># NONE</span>
+							<span class="tag" data-tag="domain-xr" data-i18n="experience_domain_tag_xr"># NONE</span>
+						</div>
+						<button class="view-detail-btn" data-target="detail-04" data-i18n="project_detail_btn">View Details</button>
+					</div>
+
+					<div class="detail">
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p04_role">
+							<li>NONE</li>
+						</ul>
+						<button class="back-btn" data-target="brief-04" data-i18n="project_brief_btn">Back to Brief</button>
+					</div>
+				</div>
+
+				<!-- PROJECT 05 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title" data-i18n="p05_title">PROJECT CODE - NONE</h3>
+						<div class="o&d">
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
+							</p>
+							<p class="date" data-i18n="p05_date">
+								PAST - FUTURE
+							</p>
+
+						</div>
+						<div class="desc" data-i18n="p05_desc">
+							A BRIEF DESCRIPTION
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-research" data-i18n="experience_type_tag_research"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-hci" data-i18n="experience_domain_tag_hci"># NONE</span>
+							<span class="tag" data-tag="domain-xr" data-i18n="experience_domain_tag_xr"># NONE</span>
+						</div>
+						<button class="view-detail-btn" data-target="detail-05" data-i18n="project_detail_btn">View Details</button>
+					</div>
+
+					<div class="detail">
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p05_role">
+							<li>NONE</li>
+						</ul>
+						<button class="back-btn" data-target="brief-05" data-i18n="project_brief_btn">Back to Brief</button>
+					</div>
+				</div>
+
+				<!-- PROJECT 06 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title" data-i18n="p06_title">PROJECT CODE - NONE</h3>
+						<div class="o&d">
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
+							</p>
+							<p class="date" data-i18n="p06_date">
+								PAST - FUTURE
+							</p>
+
+						</div>
+						<div class="desc" data-i18n="p06_desc">
+							A BRIEF DESCRIPTION
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-personal" data-i18n="experience_type_tag_personal"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-game" data-i18n="experience_domain_tag_game"># NONE</span>
+						</div>
+						<button class="view-detail-btn" data-target="detail-06" data-i18n="project_detail_btn">View Details</button>
+					</div>
+
+					<div class="detail">
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p06_role">
+							<li>NONE</li>
+						</ul>
+						<button class="back-btn" data-target="brief-06" data-i18n="project_brief_btn">Back to Brief</button>
+					</div>
+				</div>
+
+				<!-- PROJECT 07 -->
+				<div class="card">
+					<div class="brief">
+						<h3 class="title" data-i18n="p07_title">PROJECT CODE - NONE</h3>
+						<div class="o&d">
+							<p class="organization" data-i18n="organization_xjtlu">
+								UNITVERSITY NONE
+							</p>
+							<p class="date" data-i18n="p07_date">
+								PAST - FUTURE
+							</p>
+
+						</div>
+						<div class="desc" data-i18n="p07_desc">
+							A BRIEF DESCRIPTION
+						</div>
+						<div class="tags">
+							<span class="tag" data-tag="type-personal" data-i18n="experience_type_tag_personal"># NONE</span>
+							<span class="tag" data-tag="tech-c#" data-i18n="experience_tech_tag_c#"># NONE</span>
+							<span class="tag" data-tag="tech-unity" data-i18n="experience_tech_tag_unity"># NONE</span>
+							<span class="tag" data-tag="domain-game" data-i18n="experience_domain_tag_game"># NONE</span>
+						</div>
+						<button class="view-detail-btn" data-target="detail-07" data-i18n="project_detail_btn">View Details</button>
+					</div>
+
+					<div class="detail">
+						<p data-i18n="project_role"><strong>工作职责</strong></p>
+						<ul data-i18n="p07_role">
+							<li>NONE</li>
+						</ul>
+						<button class="back-btn" data-target="brief-07" data-i18n="project_brief_btn">Back to Brief</button>
+					</div>
+				</div>
+
 
 			</div>
 		</section>
 
 		<section id="publication" class="publication">
-			<h2>Publications</h2>
+			<h2 data-i18n="publication_title">Publications</h2>
 			<div class="publication-container">
 				<div class="publication-item">
-					<h3 class="pub-title">Breaking the Isolation: Exploring the Impact of Passthrough in Shared Spaces
-						on Player Performance and Experience in VR Exergames</h3>
+					<h3 class="pub-title" data-i18n="pub01_title">NONE</h3>
 					<p class="pub-info">
-						<span class="pub-venue-date"><strong>Published in:</strong> IEEE Transactions on Visualization
-							and Computer Graphics, 2024</span>
+						<span class="pub-venue-date" data-i18n="pub01_date"><strong>Published in:</strong> NONE</span>
 					</p>
-					<p class="pub-abstract">
+					<p class="pub-abstract" data-i18n="pub01_abstract">
 						<strong>Abstract:</strong> <br>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium perferendis neque
-						impedit nam beatae, rem voluptatibus expedita. Velit deleniti corporis commodi nulla error
-						aliquid quis itaque blanditiis sed rerum.
+						NONE
 					</p>
-					<p class="pub-keywords">
-						<strong>Key Words:</strong> A, B, C, D
+					<p class="pub-keywords" data-i18n="pub01_keyword">
+						<strong>Key Words:</strong> N,O,N,E
 					</p>
 
-					<p class="pub-doi">
-						<strong>DOI Link:</strong> <a href="https://doi.org/10.1109/TVCG.2024.3372114"
-							target="_blank">10.1109/TVCG.2024.3372114</a>
+					<p class="pub-doi" data-i18n="pub01_link">
+						<strong>DOI Link:</strong> <a href="NONE"
+							target="_blank">NONE</a>
 					</p>
 				</div>
 
 				<div class="publication-item">
-					<h3 class="pub-title">Another Important Research Paper Title</h3>
+					<h3 class="pub-title" data-i18n="pub02_title">NONE</h3>
 					<p class="pub-info">
-						<span class="pub-venue-date"><strong>Published in:</strong> International Journal of ... ,
-							2024</span>
+						<span class="pub-venue-date" data-i18n="pub02_date"><strong>Published in:</strong> NONE</span>
 					</p>
-					<p class="pub-abstract">
+					<p class="pub-abstract" data-i18n="pub02_abstract">
 						<strong>Abstract:</strong> <br>
-
-						Another concise summary of your work, detailing methodology and
-						results.
+						NONE
 					</p>
-					<p class="pub-keywords">
-						<strong>Key Words:</strong> X, Y, Z
+					<p class="pub-keywords" data-i18n="pub02_keyword">
+						<strong>Key Words:</strong> N,O,N,E
 					</p>
 
-					<p class="pub-doi">
-						<strong>DOI Link:</strong> <a href="https://doi.org/another-doi" target="_blank">Another DOI
-							Link</a>
+					<p class="pub-doi" data-i18n="pub02_link">
+						<strong>DOI Link:</strong> <a href="NONE"
+							target="_blank">NONE</a>
+					</p>
+				</div>
+
+				<div class="publication-item">
+					<h3 class="pub-title" data-i18n="pub03_title">NONE</h3>
+					<p class="pub-info">
+						<span class="pub-venue-date" data-i18n="pub03_date"><strong>Published in:</strong> NONE</span>
+					</p>
+					<p class="pub-abstract" data-i18n="pub03_abstract">
+						<strong>Abstract:</strong> <br>
+						NONE
+					</p>
+					<p class="pub-keywords" data-i18n="pub03_keyword">
+						<strong>Key Words:</strong> N,O,N,E
+					</p>
+
+					<p class="pub-doi" data-i18n="pub03_link">
+						<strong>DOI Link:</strong> <a href="NONE"
+							target="_blank">NONE</a>
+					</p>
+				</div>
+
+				<div class="publication-item">
+					<h3 class="pub-title" data-i18n="pub04_title">NONE</h3>
+					<p class="pub-info">
+						<span class="pub-venue-date" data-i18n="pub04_date"><strong>Published in:</strong> NONE</span>
+					</p>
+					<p class="pub-abstract" data-i18n="pub04_abstract">
+						<strong>Abstract:</strong> <br>
+						NONE
+					</p>
+					<p class="pub-keywords" data-i18n="pub04_keyword">
+						<strong>Key Words:</strong> N,O,N,E
+					</p>
+
+					<p class="pub-doi" data-i18n="pub04_link">
+						<strong>DOI Link:</strong> <a href="NONE"
+							target="_blank">NONE</a>
 					</p>
 				</div>
 
 			</div>
 		</section>
+
 
 
 
